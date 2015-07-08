@@ -1,0 +1,27 @@
+.cta,.cta:active,.cta:focus{
+	display:inline-block;
+	text-align:center;
+	padding: 15px 40px;
+	margin-top:30px;
+
+	background-color:$cta-bg;
+	color:white;
+		
+
+	//Font handling
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:700;
+	letter-spacing:1px;
+	@include font-size(12px);
+	line-height:2;
+
+	@include transition(all 200ms ease);
+
+	&:hover{
+		text-decoration:none;
+		color:$cta-bg;
+		background-color: white;
+	}
+
+}

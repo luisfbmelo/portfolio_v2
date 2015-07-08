@@ -1,0 +1,137 @@
+/*
+*
+* FONT SIZES
+* 
+*/
+/*
+p {
+  @include font-size(14px)
+}
+ */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/*
+*
+* BREAKPOINTS
+* 
+*/
+/**
+.sidebar {
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+ */
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+/*
+*
+* ANIMATION
+* 
+*/
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/**
+ *
+ *TRANSFORM
+ * 
+ */
+@mixin translate($args...) {
+  -webkit-transform: translate($args);
+  -moz-transform: translate($args);
+  -ms-transform: translate($args);
+  -o-transform: translate($args);
+  transform: translate($args);
+}
+
+@mixin translateY($arg) {
+  -webkit-transform: translateY($arg);
+  -moz-transform: translateY($arg);
+  -ms-transform: translateY($arg);
+  -o-transform: translateY($arg);
+  transform: translateY($arg);
+}
+
+@mixin translateX($arg) {
+  -webkit-transform: translateX($arg);
+  -moz-transform: translateX($arg);
+  -ms-transform: translateX($arg);
+  -o-transform: translateX($arg);
+  transform: translateX($arg);
+}
+
+/**
+ *
+ * KEYFRAME ANIMATION
+ * 
+ */
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }  
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}

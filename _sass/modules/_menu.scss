@@ -1,0 +1,48 @@
+.menubar{
+	width:100%;
+	z-index: 999;
+
+	@include font-size(12px);
+	line-height:2;
+	letter-spacing: 2.5px;
+
+	position:fixed;
+	top:0;
+	left:0;
+	padding:15px;	
+	
+	.menubar-nav{
+		list-style:none!important;
+		margin-bottom:0;
+
+		*{
+			@include transition(all 200ms ease);
+		}
+
+		li {
+			display:inline-block;			
+			padding:0 10px;
+
+			a,a:active,a:focus{
+				color: #fff;
+				text-transform: uppercase;
+				font-weight:700;
+				text-decoration:none;
+				padding-bottom:5px;
+				border-bottom:3px solid $transparent-el;
+
+				&:hover{
+					text-decoration:none;					
+					border-bottom:3px solid $active-el;
+				}
+			}	
+
+			&.active {
+				a{
+					border-bottom:3px solid $active-el;
+				}
+			}
+			
+		}
+	}
+}
