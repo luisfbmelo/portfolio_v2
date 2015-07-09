@@ -3,12 +3,35 @@ html,body{
 	width:100%;
 
 	font:{
-		family:'Open Sans', sans-serif;
 		size: 16px!important;
 	} 
 
 }
 
+*{
+	font-family:'Open Sans', sans-serif;
+}
+
 .clearAll{
 	clear:both;
+}
+
+.container.no-pad,
+.container-fluid.no-pad{
+	padding-right:0;
+	padding-left:0;
+
+	> .row{
+		margin-right:0;
+		margin-left:0;
+	}
+}
+
+.row.no-pad {
+  margin-right:0;
+  margin-left:0;
+}
+.row.no-pad > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
 }

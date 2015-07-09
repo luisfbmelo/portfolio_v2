@@ -1,0 +1,22 @@
+#Container .mix{
+	display: none;
+}
+
+.filter-tabs{
+	text-align:center;
+	margin-bottom:30px;
+
+	.filter{
+		display:inline-block;
+		padding:15px 20px;
+		border:1px solid $simple-bg;
+		color:$simple-bg;
+
+		&.active,&:hover{
+			border:1px solid $simple-bg;
+			background-color:$simple-bg;
+			color:$simple-color;
+			cursor:pointer;
+		}
+	}
+}

@@ -10,10 +10,16 @@
 	top:0;
 	left:0;
 	padding:15px;	
+
+	.navbar{
+		min-height:0!important;
+		margin-bottom:0!important;
+	}
 	
 	.menubar-nav{
 		list-style:none!important;
 		margin-bottom:0;
+		padding-left:0;
 
 		*{
 			@include transition(all 200ms ease);
@@ -21,7 +27,7 @@
 
 		li {
 			display:inline-block;			
-			padding:0 10px;
+			//padding:0 10px;
 
 			a,a:active,a:focus{
 				color: #fff;
@@ -42,7 +48,17 @@
 					border-bottom:3px solid $active-el;
 				}
 			}
+
+			& + li:before{
+				color:white;
+				content:"/ ";
+				padding-left:5px;
+			}
 			
 		}
+	}
+
+	&.scrolled{
+		background:$simple-bg;
 	}
 }

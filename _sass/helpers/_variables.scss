@@ -1,10 +1,18 @@
 //MENU COLORS
-$active-el:#6ac8c8;
+$active-el:#41C4B5;
 $transparent-el: rgba(255,255,255,.0);
+
+//BUTTONS
+$cta-bg:$active-el;
+$simple-bg:#323232;
+$simple-color:#ffffff;
 
 //INTRO
 $workareas-border:rgba(250,250,250,0.7);
 $workareas-text:#F0F0F0;
 
-//BUTTONS
-$cta-bg:$active-el;
+//ABOUT ME
+$area-bg: $active-el;
+
+//WORK
+$overlay:rgba(0,0,0,0.8);

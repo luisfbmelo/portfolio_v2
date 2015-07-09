@@ -1,3 +1,8 @@
+.cta-container{
+	width:100%;
+	text-align:center;
+}
+
 .cta,.cta:active,.cta:focus{
 	display:inline-block;
 	text-align:center;
@@ -24,4 +29,59 @@
 		background-color: white;
 	}
 
+	&.to-dark, &.to-dark:active, &.to-dark:focus{
+		background-color:$cta-bg;
+		color:white;
+
+		&:hover{
+			color: $simple-color;
+			background-color: $simple-bg;
+		}
+	}
+}
+
+//ABOUT ME
+.me-btns {
+	text-align:center;
+	a{
+		display: inline-block;
+		@include font-size(16px);
+
+		margin:30px auto 0;
+		padding: 15px 20px;
+		line-height: 1.42857143;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		color: $simple-color;
+		background-color: $simple-bg;
+
+		text:{
+			decoration:none;
+			align:center;
+		}
+
+		font-weight:600;
+
+		@include transition(all 200ms ease);
+
+		&:hover{
+			color: $simple-bg;
+			background-color: $simple-color;
+			text-decoration:none;
+		}
+
+		&:focus, &:focus, &:hover {
+			color: $simple-bg;
+			text-decoration: none;
+		}
+
+		i{
+			padding-right: 10px;
+			@include font-size(20px);
+		}
+	}
 }

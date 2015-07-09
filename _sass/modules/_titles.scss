@@ -1,0 +1,21 @@
+.section-title{
+	text-align:center;
+	margin-bottom:60px;
+
+	h2{
+		font-weight:300;
+		@include font-size(32px);
+		text-transform: uppercase;
+		margin:0;
+
+		&.colored{
+			color:$simple-bg;
+		}
+	}
+
+	footer{
+		font-weight:300;
+		@include font-size(16px);
+	}
+	
+}
