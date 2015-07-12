@@ -1,6 +1,7 @@
 //MENU COLORS
 $active-el:#41C4B5;
 $transparent-el: rgba(255,255,255,.0);
+$scrolled: rgba(50, 50, 50, 0.93);
 
 //BUTTONS
 $cta-bg:$active-el;
@@ -13,6 +14,15 @@ $workareas-text:#F0F0F0;
 
 //ABOUT ME
 $area-bg: $active-el;
+$img-border:rgba(250,250,250,0.3);
 
 //WORK
 $overlay:rgba(0,0,0,0.8);
+
+//FORMS
+$input-border:#EFEFEF;
+$form-text:#666666;
+$send-border:$active-el;
+$send-text:$active-el;
+$send-bg:$active-el;
+$or-sep:rgb(137, 137, 137);

@@ -1,0 +1,22 @@
+form{
+	.input-container{
+		input,
+		textarea,
+		select{
+			@include transition(all 200ms ease);
+			width:100%;
+
+			&:required + label{
+				&:after{
+					content:" *";
+				}
+			}
+		}
+
+		input[type='submit']{
+			&:focus, &:focus{
+    			outline: 0;
+    		}
+		}
+	}
+}

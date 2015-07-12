@@ -1,0 +1,53 @@
+/*ABOUT ME*/
+.about-me{
+	background-color:$area-bg;
+	padding:60px 0;
+	color:white;
+
+	.me-img{
+		width:90%;
+		height:90%;		
+		overflow:hidden;
+		text-align:center;
+		margin:0 auto;
+
+		img{
+			width:100%;
+			height:100%;
+			@include border-radius(50%);
+			border:8px solid $img-border;
+		}
+	}
+
+	.about-text{
+		h3{
+			font-weight:400;
+		}
+
+		h4{
+			font-weight:600;
+		}
+
+		p{
+			&:first-of-type{
+				margin-top:25px;
+			}
+			line-height:1.5;
+			@include font-size(14px);
+		}
+	}
+
+	@include media-query(767px) {
+		.me-img{
+			width:50%;
+			height:50%;
+			margin:0 auto 30px;
+		}
+
+		.about-text{
+			h3,h4{
+				text-align:center;
+			}
+		}
+	}
+}

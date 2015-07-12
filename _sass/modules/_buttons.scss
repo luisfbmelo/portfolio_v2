@@ -68,16 +68,12 @@
 
 		@include transition(all 200ms ease);
 
-		&:hover{
+		&:hover,&:focus, &:active{
 			color: $simple-bg;
 			background-color: $simple-color;
 			text-decoration:none;
 		}
 
-		&:focus, &:focus, &:hover {
-			color: $simple-bg;
-			text-decoration: none;
-		}
 
 		i{
 			padding-right: 10px;

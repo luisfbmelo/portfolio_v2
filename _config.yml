@@ -15,3 +15,6 @@ markdown: kramdown
 permalink: pretty
 
 highlighter: rouge
+
+#Exclude files and folders from compiling
+exclude: [node_modules, package.json, js/app.js, js/plugins, js/custom_modules, Gruntfile.js]

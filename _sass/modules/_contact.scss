@@ -1,0 +1,92 @@
+/*CONTACT*/
+.contact-me{
+	padding:60px 0;	
+
+	.section-title{
+		margin-bottom:30px;
+	}
+
+	.email-section{
+		@include font-size(16px);
+
+
+		&>span{
+			display:block;
+			text-align:center;
+
+			a{
+				color:$active-el;
+			}
+		}
+
+		p{
+			display:block;
+			margin:40px 0 60px;
+			position: relative;
+			text-align: center;
+			z-index:1;		
+			color:$or-sep;
+		}
+
+		p:before {
+		    border-top: 1px solid $or-sep;
+		    content:"";
+		    margin: 0 auto;
+		    position: absolute;
+		    top: 12px; left: 0; right: 0; bottom: 0;
+		    width: 70px;
+		    z-index: -1;
+		}
+
+		p span { background: #fff; padding: 0 10px; }
+	}
+
+	.input-container{
+		position:relative;
+
+		input,
+		textarea{
+			min-height:50px;
+			border:1px solid $input-border;
+			display: block;
+			color: $form-text;
+			background-color:white;
+			padding: 10px;
+			@include font-size(13px);
+			margin-bottom:50px;
+
+			outline-color:$active-el;
+
+			& + label{
+				@include font-size(14px);
+
+				position:absolute;
+				left:15px;
+				top:-10px;
+
+				@include translateY(-100%);
+			}
+
+			
+		}
+		input[type='submit']{
+			width:auto!important;
+			margin:0 auto;
+			padding:20px 35px;
+			border-color:$send-border;
+			color:$send-text;
+			@include font-size(18px);
+
+			@include translateY(-50%);
+
+			&:hover{
+				background-color:$send-bg;
+				color:white;
+			}
+		}
+
+		textarea{
+			margin-bottom:0;
+		}
+	}
+}

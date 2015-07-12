@@ -8,9 +8,10 @@
 
 	.filter{
 		display:inline-block;
-		padding:15px 20px;
+		padding:10px 20px;
 		border:1px solid $simple-bg;
 		color:$simple-bg;
+		margin-bottom:15px;
 
 		&.active,&:hover{
 			border:1px solid $simple-bg;
