@@ -174,9 +174,8 @@ p {
  * 
  */
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: $radius!important;
+  border-radius: $radius!important;
 }
 
 /**
@@ -211,4 +210,27 @@ div.logo {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/**
+ *
+ * BOX SHADOW
+ * 
+ */
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+/**
+ *
+ * USER SELECT
+ * 
+ */
+@mixin user-select($arg){
+  -webkit-user-select: $arg;
+  -moz-user-select: $arg;
+  -ms-user-select: $arg;
+  user-select: $arg;
 }

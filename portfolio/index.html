@@ -1,0 +1,23 @@
+---
+layout: subs
+title: Portfolio
+masterClass: portfolio-top
+---
+<section class="sub-section portfolio-section">
+  <div class="container-fluid no-pad">
+  	<!--TABS-->
+  	<div class="row filter-tabs">
+  		<div class="filter" data-filter="all">All</div>
+  		<div class="filter" data-filter=".design">UI/UX</div>
+  		<div class="filter" data-filter=".code">Code</div>
+  		<div class="filter" data-filter=".photography">Photography</div>
+  	</div>
+
+
+    <!--WORKS CONTAINER-->
+    {% include work-list.html %}
+
+    {% include work-modals.html %}
+  </div>
+</section>
+

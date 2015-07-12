@@ -1,0 +1,71 @@
+---
+layout: subs
+title: Blog
+masterClass: blog-top
+---
+
+<section class="sub-section blog-wrapper">
+	<div class="container">
+		<div class="row blog-posts">
+			{% for post in paginator.posts %}
+				<div class="col-xs-12 col-sm-4">
+					<div class="post-container">
+						<figure>
+							<a href="{{ post.url | prepend: site.baseurl }}">
+								<div class="post-image-overlay"><span>See more</span></div>
+								<img src="{{ post.images[0].url }}" alt="{{ post.images[0].alt }}" class="img-responsive full-width">
+							</a>
+						</figure>
+						<div class="post-summary">
+							<div class="post-date">{{ post.date | date: '%B %d, %Y' }}</div>						
+							<h4><a href="">{{ post.title }}</a></h4>
+							<article>{{ post.excerpt | strip_html | replace: '&nbsp;', ' ' | truncate: 150 }}</article>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="row">
+			{% if paginator.total_pages > 1 %}
+				<ul class="pagination">
+				  {% if paginator.previous_page %}
+				  	<li>
+				    	<a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-left"></i></a>
+			    	</li>
+				  {% else %}
+				  	<li class="disabled">
+					    <span><i class="fa fa-chevron-left"></i></span>
+			    	</li>
+				  {% endif %}
+
+				  {% for page in (1..paginator.total_pages) %}
+				    {% if page == paginator.page %}
+				    	<li class="active">
+				      		<a href="#">{{ page }} <span class="sr-only">(current)</span></a>
+				      	</li>
+				    {% elsif page == 1 %}
+				    	<li>
+				      		<a href="{{ '/blog/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+				      	</li>
+				    {% else %}
+				    	<li>
+				      		<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+			      		</li>
+				    {% endif %}
+				  {% endfor %}
+
+				  {% if paginator.next_page %}
+			  			<li>
+				    		<a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-right"></i></a>
+			    		</li>
+				  {% else %}
+				  	<li class="disabled">
+				    	<span><i class="fa fa-chevron-right"></i></span>
+				    </li>
+				  {% endif %}
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+</section>

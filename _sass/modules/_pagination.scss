@@ -1,0 +1,21 @@
+.pagination{
+	li{
+		span, a{
+			@include border-radius(0);
+			color:$simple-bg!important;
+		}
+
+		&.active{
+			a{
+				background-color:$simple-bg!important;
+				border-color:$simple-bg!important;
+				color:white!important;
+			}
+		}
+
+		&.disabled{
+			display:none;
+			
+		}
+	}
+}

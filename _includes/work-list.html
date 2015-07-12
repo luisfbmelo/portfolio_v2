@@ -1,0 +1,38 @@
+<div class="row no-pad" id="Container">
+
+  <!--LIST-->
+  {% for work in site.portfolio %}
+    <!-- Set test var to false -->
+    {% assign test = false %}
+
+    <!-- Test if there is any TYPE as argument -->
+    {% if include.type == null %}
+      {% assign test = true %}
+    {% else %}
+
+      <!-- If there is a TYPE, compare with work item -->
+      {% if work.type == include.type %}
+        {% assign test = true %}
+      {% endif %}  
+    {% endif %}
+
+   {% if test %}
+    <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.categories | join:" " }}" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
+      <div class="work-item">
+        <div class="work-img">
+
+          {% for image in work.images limit:1 %}
+            <img src="{{ image.url | prepend: site.baseurl }}" alt="{{image.alt}}" class="img-responsive full-width">
+          {% endfor %}
+        </div>
+        <div class="work-text">
+          <h3>{{ work.title }}</h3>
+          <footer>{{ work.categories | join:" / " }}</footer>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  {% endfor %}
+
+</div>

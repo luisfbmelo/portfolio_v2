@@ -1,4 +1,8 @@
 /*WORK*/
+.filter-tabs{
+	@include user-select(none);
+}
+
 .work{
 	padding:60px 0;	
 }
@@ -23,6 +27,7 @@
 		background-color:$overlay;
 		color:white;
 
+
 		@include opacity(0);
 		@include transition(all 200ms ease);
 
@@ -31,6 +36,8 @@
 			text-align:center;
 			line-height: 1.5;
 			margin:0;
+			@include font-size(16px);
+			font-weight:600;
 
 			position:absolute;
 			top:45%;
@@ -56,10 +63,9 @@
 		cursor:pointer;
 		.work-text{
 			@include opacity(1);
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
+			@include user-select(none);
+			
+
 			h3{
 				top:50%;
 			}
@@ -86,7 +92,7 @@
 			background-color:$area-bg;
 			padding:10px;
 			@include opacity(1);
-
+			height:128px;
 
 			h3{
 				position:static;
@@ -125,4 +131,14 @@
 			}
 		}
 	}
+}
+
+@include media-query(768px) {
+	.work-item{
+		.work-text{
+			height:auto!important;
+		}
+
+	}
+
 }

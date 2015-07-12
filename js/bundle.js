@@ -22,7 +22,7 @@ global.$ = require('jquery');
 var bootstrap = require("../plugins/bootstrap.js");
 
 $(".fake-backgrop").on("click", function(){
-	$(".modal").modal('hide')
+	$(".modal").modal('hide');
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../plugins/bootstrap.js":5,"jquery":9}],3:[function(require,module,exports){
@@ -39,20 +39,33 @@ $("#testimonials-carousel").owlCarousel({
 	items: 1,
 	singleItem: true
 });
+
+$(".portfolio-carousel").owlCarousel({
+ 
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+  });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../plugins/mixitup.js":6,"../plugins/owlcarousel.js":7,"jquery":9}],4:[function(require,module,exports){
 var $ = require('jquery');
 
 $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
 
-    var firstElHeight = document.getElementsByClassName('intro-section')[0].offsetHeight;
+	if (document.getElementsByClassName('top-level-section')[0] != undefined){
+		var scroll = $(window).scrollTop();
 
-    if (scroll >= firstElHeight) {
-        $(".menubar").addClass("scrolled");
-    } else {
-        $(".menubar").removeClass("scrolled");
-    }
+	    var firstElHeight = document.getElementsByClassName('top-level-section')[0].offsetHeight;
+
+	    if (scroll >= firstElHeight) {
+	        $(".menubar").addClass("scrolled");
+	    } else {
+	        $(".menubar").removeClass("scrolled");
+	    }
+	}
+    
 });
 },{"jquery":9}],5:[function(require,module,exports){
 (function (global){

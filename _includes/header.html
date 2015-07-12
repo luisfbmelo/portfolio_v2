@@ -3,9 +3,33 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar">
       <ul class="menu menubar-nav">
-        <li class="{% if page.url == '/' %}active{% endif %}"><a href="{{site.baseurl}}/">HOME</a></li>
-        <li class="{% if page.url == '/portfolio.html' %}active{% endif %}"><a href="{{site.baseurl}}/portfolio.html">PORTFOLIO</a></li>  
-        <li class="{% if page.url == '/blog.html' %}active{% endif %}"><a href="{{site.baseurl}}/blog.html">BLOG</a></li>          
+      {% for item in site.pages_list %}
+        <!-- Set test variable to false -->
+        {% assign test = false %}
+          
+        <!-- Get page url and loop item string size -->
+        {% capture url_size %}{{ page.url | size }}{% endcapture %}
+        {% capture item_size %}{{ item[1] | size }}{% endcapture %}
+
+        <!-- Check if page url contains chars from loop item -->
+        {% if page.url contains item[1] %}
+           {% assign test = true %}         
+        {% endif %}
+        
+        <!-- Check if page url is home without pretty url and loop item is also home -->
+        {% if page.url == "/index.html" and item_size == "1" %}
+          {% assign test = true %}         
+        {% endif %}
+
+        <!-- If page is not home, and still contains part of home url and current loop item is home -->
+        {% if page.url contains item[1] and item_size == "1" and page.url != "/index.html" %}
+           {% assign test = false %}
+        {% endif %}
+
+        <li class="{% if test == true  %}active{% endif %}"><a href="{{item[1]}}">{{item[0]}}</a></li>
+      
+      
+      {% endfor %}          
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

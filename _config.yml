@@ -1,5 +1,5 @@
 # Site settings
-title: .luismelo multimédia
+title: LuisMelo Multimédia
 email: geral@luisfbmelo.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -12,9 +12,26 @@ github_username:  luisfbmelo
 
 # Build settings
 markdown: kramdown
-permalink: pretty
 
 highlighter: rouge
 
 #Exclude files and folders from compiling
 exclude: [node_modules, package.json, js/app.js, js/plugins, js/custom_modules, Gruntfile.js]
+
+#Excerpt
+excerpt_separator: <!--more-->
+
+#Num of posts
+paginate: 3
+paginate_path: "/blog/page/:num"
+
+#Menu
+pages_list:       
+  Home: '/'
+  Portfolio: '/portfolio/'
+  Blog: '/blog/'
+
+collections:
+- portfolio
+
+permalink: /blog/:year/:month/:day/:title/

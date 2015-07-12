@@ -1,0 +1,33 @@
+.header-top{
+	width:100%;
+	img{
+		padding:70px 0 30px;
+		margin:0 auto;
+	}
+
+	h2{
+		color:white;
+		text-align:center;
+		padding-bottom:40px;
+		margin:0;
+	}
+
+	&.portfolio-top{
+		background-image: url(../images/subs/sub-portfolio.jpg);
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-position: center;			
+	}
+
+	&.blog-top{
+		background-image: url(../images/subs/sub-blog.jpg);
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-position: center;			
+	}
+}
+
+.sub-section{
+	background-color:$sub-bg;
+	padding:60px 0;
+} 
