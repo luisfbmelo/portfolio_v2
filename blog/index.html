@@ -18,7 +18,7 @@ masterClass: blog-top
 						</figure>
 						<div class="post-summary">
 							<div class="post-date">{{ post.date | date: '%B %d, %Y' }}</div>						
-							<h4><a href="">{{ post.title }}</a></h4>
+							<h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
 							<article>{{ post.excerpt | strip_html | replace: '&nbsp;', ' ' | truncate: 150 }}</article>
 						</div>
 					</div>
