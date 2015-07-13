@@ -15,8 +15,19 @@
 
    {% if test %}
 
+
+
+   <!--CHECK IF HAS PHOTO CAT -->
+   {% assign isPhoto=false %}
+
+   {% for cat in work.classes %}
+    {% if cat == "photo" %}
+      {% assign isPhoto = true %}
+    {% endif %}
+   {% endfor %}
+
   <div class="portfolio-modal modal fade" id="modal-{{work.permalink}}" tabindex="-1" role="dialog" aria-labelledby="{{work.permalink}}">
-    <div class="modal-content">
+    <div class="modal-content {% if isPhoto == true %}photo-proj{% endif %}">
       <div class="fake-backgrop"></div>
 
       <div class="close-modal" data-dismiss="modal">
@@ -38,14 +49,15 @@
 
               <div id="owl-{{work.permalink}}" class="owl-carousel owl-theme portfolio-carousel">              
                 {% for image in work.images %}
-                  <div class="item"><img src="{{ image.url | prepend: site.baseurl }}" alt="{{image.alt}}"></div>
+                  <div class="item"><img src="{{site.baseurl}}{{ image.url }}" alt="{{image.alt}}"></div>
                 {% endfor %}
               </div>
 
 
               <!--FULL DESC-->
               <div class="row complete-desc">
-                <div class="col-md-9 proj-desc">
+              {% if work.content.size > 1 %}
+                <div class="{% if work.ext-url %}col-md-9{% else %}col-xs-12{% endif %} proj-desc">
                   <h2>
                     Descrição
                   </h2>
@@ -53,9 +65,12 @@
                     {{ work.content }}
                   </p>
                 </div>
-                <div class="col-md-3 proj-btns">
-                  <a href="#" target="_blank" class="cta to-dark">View project</a>
+                {% endif %}
+                {% if work.ext-url %}
+                <div class="{% if work.content.size > 1 %}col-md-3{% else %}col-xs-12 aCenter{% endif %} proj-btns">
+                  <a href="http://{{ work.ext-url }}" target="_blank" class="cta to-dark">View project</a>
                 </div>
+                {% endif %}
               </div>
             </div>
           </div>

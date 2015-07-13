@@ -37,7 +37,8 @@ $('#Container').mixItUp();
 
 $("#testimonials-carousel").owlCarousel({
 	items: 1,
-	singleItem: true
+	singleItem: true,
+	autoPlay: true
 });
 
 $(".portfolio-carousel").owlCarousel({
@@ -45,7 +46,11 @@ $(".portfolio-carousel").owlCarousel({
       navigation : true,
       slideSpeed : 300,
       paginationSpeed : 400,
-      singleItem:true
+      singleItem:true,
+      navigationText: [
+	      "<i class='fa fa-chevron-left'></i>",
+	      "<i class='fa fa-chevron-right'></i>"
+      ],
  
   });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
@@ -53,19 +58,14 @@ $(".portfolio-carousel").owlCarousel({
 var $ = require('jquery');
 
 $(window).scroll(function() {    
+	var scroll = $(window).scrollTop();
 
-	if (document.getElementsByClassName('top-level-section')[0] != undefined){
-		var scroll = $(window).scrollTop();
+    if (scroll >= 70) {
+        $(".menubar").addClass("scrolled");
+    } else {
+        $(".menubar").removeClass("scrolled");
+    }
 
-	    var firstElHeight = document.getElementsByClassName('top-level-section')[0].offsetHeight;
-
-	    if (scroll >= firstElHeight) {
-	        $(".menubar").addClass("scrolled");
-	    } else {
-	        $(".menubar").removeClass("scrolled");
-	    }
-	}
-    
 });
 },{"jquery":9}],5:[function(require,module,exports){
 (function (global){

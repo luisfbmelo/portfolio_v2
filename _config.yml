@@ -22,7 +22,7 @@ exclude: [node_modules, package.json, js/app.js, js/plugins, js/custom_modules, 
 excerpt_separator: <!--more-->
 
 #Num of posts
-paginate: 3
+paginate: 6
 paginate_path: "/blog/page/:num"
 
 #Menu

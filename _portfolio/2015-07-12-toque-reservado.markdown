@@ -8,10 +8,14 @@ images:
 - url: /images/work_ex.jpg
   alt: Toque Reservado Management
 categories:
+- Code
+- Ux/UI
+classes:
 - code
-- design
+- interaction
 permalink: toque-reservado-repair-management-platform
 type: main
+ext-url: www.google.com
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

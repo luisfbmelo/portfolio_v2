@@ -8,7 +8,8 @@ $('#Container').mixItUp();
 
 $("#testimonials-carousel").owlCarousel({
 	items: 1,
-	singleItem: true
+	singleItem: true,
+	autoPlay: true
 });
 
 $(".portfolio-carousel").owlCarousel({
@@ -16,6 +17,10 @@ $(".portfolio-carousel").owlCarousel({
       navigation : true,
       slideSpeed : 300,
       paginationSpeed : 400,
-      singleItem:true
+      singleItem:true,
+      navigationText: [
+	      "<i class='fa fa-chevron-left'></i>",
+	      "<i class='fa fa-chevron-right'></i>"
+      ],
  
   });

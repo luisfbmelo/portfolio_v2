@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 page-section: Blog
-date:   2015-07-12 20:37:54
+date:   2015-07-15 20:37:54
 categories: jekyll update
 images: 
 - url: /images/work_ex.jpg

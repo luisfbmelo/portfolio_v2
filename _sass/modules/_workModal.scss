@@ -11,6 +11,26 @@
 		padding: 65px 0;
 		text-align: center;
 
+		&.photo-proj{
+			background-color:black!important;
+
+			* {
+				color:white!important;
+			}
+
+			.complete-desc,
+			.proj-intro-text{
+				display:none!important;
+			}
+
+			.close-modal{
+				background-color:black!important;
+				.lr,.rl{
+					background-color: white!important;
+				}
+			}
+		}
+
 		.fake-backgrop{
 			position:absolute;
 			top:0;
@@ -24,7 +44,6 @@
 			position:fixed;
 			width: 75px;
 			height: 75px;
-			background-color: transparent;
 			top: 25px;
 			right: 25px;
 			cursor: pointer;

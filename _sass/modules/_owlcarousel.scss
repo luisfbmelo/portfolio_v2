@@ -95,12 +95,8 @@
 	margin: 5px;
 	padding: 3px 10px;
 	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	background: #869791;
-	filter: Alpha(Opacity=50);/*IE7 fix*/
-	opacity: 0.5;
+	z-index:999;
+	@include font-size(24px);
 }
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
@@ -153,6 +149,24 @@
 .owl-item.loading{
 	min-height: 150px;
 	background: url(../images/plugins/AjaxLoader.gif) no-repeat center center
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: 15px;
+  top: calc(50% - 18px);
+
+  @include translateY(-50%);
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: 15px;
+  top: calc(50% - 18px);
+  @include translateY(-50%);
+
 }
 
 /**
