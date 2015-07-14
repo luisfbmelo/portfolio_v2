@@ -5,6 +5,13 @@ masterClass: blog-top
 <div class="container post">
 	<div class="row">
 		<div class="col-xs-12">
+			<div class="breadcrumbs">
+				<a href="/blog/">Blog</a> · {{ page.title }}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
 			<header class="post-header">
 			    <h1 class="post-title">{{ page.title }}</h1>
 			    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
@@ -13,6 +20,25 @@ masterClass: blog-top
 			<article class="post-content">
 				{{ content }}
 			</article>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="share-title-section">
+				<span>Share on</span>
+			</div>
+			<ul class="share-page">			    
+			    <li>
+			    	<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="{{ page.title }}"><i class="fa fa-facebook"></i></a>
+	    		</li>
+			    <li>
+			    	<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="{{ page.title }}"><i class="fa fa-twitter"></i></a>
+		    	</li>
+			    <li>
+			    	<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="{{ page.title }}"><i class="fa fa-google-plus"></i></a>
+		    	</li>
+			</div>
 		</div>
 	</div>
 </div>

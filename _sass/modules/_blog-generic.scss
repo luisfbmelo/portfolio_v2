@@ -111,4 +111,28 @@
 			}
 		}
 	}
+
+	.post-cats{
+		border-top: 1px solid $input-border;
+		padding:20px;
+		color:$post-summary;
+		@include font-size(14px);
+	}
+}
+
+.breadcrumbs{
+	text-align:center;
+	border-bottom: 1px solid $input-border;
+	padding-bottom:15px;
+	font-style:italic;
+
+	a{
+		color:$active-el;
+		@include transition(all 200ms ease);
+
+		&:hover{
+			text-decoration:none;
+			@include opacity(0.7);
+		}
+	}
 }

@@ -22,6 +22,10 @@ masterClass: blog-top
 							<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h4>
 							<article>{{ post.excerpt | strip_html | replace: '&nbsp;', ' ' | truncate: 150 }}</article>
 						</div>
+
+						<div class="post-cats">
+							Tags: {{ post.categories | join:", " }}
+						</div>
 					</div>
 				</div>
 			{% endfor %}
