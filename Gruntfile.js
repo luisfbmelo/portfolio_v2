@@ -36,14 +36,14 @@ module.exports = function(grunt) {
 			    }
 		    }
 		},
-
 	  	// run tasks in parallel
         concurrent: {
             serve: [
                 'browserify',
-                'uglify',
-                'watch',
-                'shell:jekyllServe'
+                'uglify',                
+                'watch',               
+                'shell:jekyllServe',
+                
             ],
             options: {
                 logConcurrentOutput: true

@@ -1,0 +1,16 @@
+---
+layout: default
+title:  "Terceira Island - Azores"
+date:   2015-06-30
+images: 
+- url: photo/terceira.jpg
+  alt: Terceira Island - Azores
+thumbnail:
+- url: photo/terceira.jpg
+  alt: Terceira Island - Azores
+categories:
+- Photography
+classes:
+- photo
+permalink: terceira-island-azores
+---

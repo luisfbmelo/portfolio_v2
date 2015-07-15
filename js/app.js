@@ -14,3 +14,6 @@ $('a').smoothScroll({
     easing: 'swing',
     offset: -55
 });
+
+// Analytics
+require("./custom_modules/analytics.js");

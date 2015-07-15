@@ -234,3 +234,20 @@ div.logo {
   -ms-user-select: $arg;
   user-select: $arg;
 }
+
+/**
+ *
+ * GENERIC LINKS
+ * 
+ */
+@mixin generic-links(){
+  a{
+    color:$active-el!important;
+    @include transition(all 200ms ease);
+
+    &:hover{
+      text-decoration:none!important;
+      @include opacity(0.6);
+    }
+  }
+}

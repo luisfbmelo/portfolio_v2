@@ -1,0 +1,16 @@
+---
+layout: default
+title:  "Concert - Azores"
+date:   2015-07-04
+images: 
+- url: photo/concert.jpg
+  alt: Concert - Azores
+thumbnail:
+- url: photo/concert.jpg
+  alt: Concert - Azores
+categories:
+- Photography
+classes:
+- photo
+permalink: concert-azores
+---

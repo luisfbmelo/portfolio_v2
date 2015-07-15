@@ -15,7 +15,31 @@ $('a').smoothScroll({
     easing: 'swing',
     offset: -55
 });
-},{"./custom_modules/bootstrap-fc.js":2,"./custom_modules/external.js":3,"./custom_modules/menu.js":4,"jquery":9,"jquery-smooth-scroll":8}],2:[function(require,module,exports){
+
+// Analytics
+require("./custom_modules/analytics.js");
+},{"./custom_modules/analytics.js":2,"./custom_modules/bootstrap-fc.js":3,"./custom_modules/external.js":4,"./custom_modules/menu.js":5,"jquery":10,"jquery-smooth-scroll":9}],2:[function(require,module,exports){
+var $ = require('jquery');
+
+/**
+ * 
+ * Additional tracking for google analytics.
+ * 
+ */
+
+// External links
+$('a[rel="external"]').on("click", function(e) {
+	var dest = $(this).attr('href');
+
+	ga('send', 'event', 'Link', 'External', dest);
+});
+
+// Project modal was opened
+$('.proj-details-modal').on("click", function(e) {
+	var dest = $(this).attr('id');
+	ga('send', 'event', 'Project', 'Modal', dest);
+});
+},{"jquery":10}],3:[function(require,module,exports){
 (function (global){
 global.$ = require('jquery');
 
@@ -25,7 +49,7 @@ $(".fake-backgrop").on("click", function(){
 	$(".modal").modal('hide');
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../plugins/bootstrap.js":5,"jquery":9}],3:[function(require,module,exports){
+},{"../plugins/bootstrap.js":6,"jquery":10}],4:[function(require,module,exports){
 (function (global){
 global.$ = require('jquery');
 
@@ -51,10 +75,11 @@ $(".portfolio-carousel").owlCarousel({
 	      "<i class='fa fa-chevron-left'></i>",
 	      "<i class='fa fa-chevron-right'></i>"
       ],
+      itemsScaleUp:true
  
   });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../plugins/mixitup.js":6,"../plugins/owlcarousel.js":7,"jquery":9}],4:[function(require,module,exports){
+},{"../plugins/mixitup.js":7,"../plugins/owlcarousel.js":8,"jquery":10}],5:[function(require,module,exports){
 var $ = require('jquery');
 
 $(window).scroll(function() {    
@@ -67,7 +92,7 @@ $(window).scroll(function() {
     }
 
 });
-},{"jquery":9}],5:[function(require,module,exports){
+},{"jquery":10}],6:[function(require,module,exports){
 (function (global){
 
 ; jQuery = global.jQuery = require("jquery");
@@ -84,7 +109,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"jquery":9}],6:[function(require,module,exports){
+},{"jquery":10}],7:[function(require,module,exports){
 (function (global){
 
 ; jQuery = global.jQuery = require("jquery");
@@ -2187,7 +2212,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"jquery":9}],7:[function(require,module,exports){
+},{"jquery":10}],8:[function(require,module,exports){
 (function (global){
 
 ; jQuery = global.jQuery = require("jquery");
@@ -2244,7 +2269,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"jquery":9}],8:[function(require,module,exports){
+},{"jquery":10}],9:[function(require,module,exports){
 /*!
  * jQuery Smooth Scroll - v1.5.5 - 2015-02-19
  * https://github.com/kswedberg/jquery-smooth-scroll
@@ -2518,7 +2543,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 }));
 
 
-},{"jquery":9}],9:[function(require,module,exports){
+},{"jquery":10}],10:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/

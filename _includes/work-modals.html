@@ -49,7 +49,7 @@
 
               <div id="owl-{{work.permalink}}" class="owl-carousel owl-theme portfolio-carousel">              
                 {% for image in work.images %}
-                  <div class="item"><img src="{{site.baseurl}}{{ image.url }}" alt="{{image.alt}}"></div>
+                  <div class="item"><img src="/images/portfolio/{{ image.url }}" alt="{{image.alt}}"></div>
                 {% endfor %}
               </div>
 
@@ -59,7 +59,7 @@
               {% if work.content.size > 1 %}
                 <div class="{% if work.ext-url %}col-md-9{% else %}col-xs-12{% endif %} proj-desc">
                   <h2>
-                    Descrição
+                    Description
                   </h2>
                   <p>
                     {{ work.content }}
@@ -68,7 +68,7 @@
                 {% endif %}
                 {% if work.ext-url %}
                 <div class="{% if work.content.size > 1 %}col-md-3{% else %}col-xs-12 aCenter{% endif %} proj-btns">
-                  <a href="http://{{ work.ext-url }}" target="_blank" class="cta to-dark">View project</a>
+                  <a href="http://{{ work.ext-url }}" target="_blank" class="cta to-dark" rel="external">View project</a>
                 </div>
                 {% endif %}
               </div>

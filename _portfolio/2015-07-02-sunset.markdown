@@ -1,0 +1,16 @@
+---
+layout: default
+title:  "Sunset - Azores"
+date:   2015-07-02
+images: 
+- url: photo/sunset.jpg
+  alt: Sunset - Azores
+thumbnail:
+- url: photo/sunset.jpg
+  alt: Sunset - Azores
+categories:
+- Photography
+classes:
+- photo
+permalink: sunset-azores
+---

@@ -1,12 +1,11 @@
 # Site settings
-title: LuisMelo Multimédia
+title: Luis Melo
 email: geral@luisfbmelo.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I'm a Portuguese UX/UI designer, front-end developer and also experienced with backend development, aiming to create usefull, clean and user-centered web and mobile experiences.	
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://luisfbmelo.github.io" # the base hostname & protocol for your site
+url: "http://luisfbmelo.github.io/" # the base hostname & protocol for your site
+#url: "http://localhost:4000"
 twitter_username: luisfbmelo
 github_username:  luisfbmelo
 
@@ -35,3 +34,7 @@ collections:
 - portfolio
 
 permalink: /blog/:year/:month/:day/:title/
+
+#SASS
+sass:
+  style: compressed

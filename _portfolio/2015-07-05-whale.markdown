@@ -1,0 +1,17 @@
+---
+layout: default
+title:  "Whale Watching - Azores"
+date:   2015-07-05
+images: 
+- url: photo/whale.jpg
+  alt: Whale Watching - Azores
+thumbnail:
+- url: photo/whale.jpg
+  alt: Whale Watching - Azores
+categories:
+- Photography
+classes:
+- photo
+permalink: whale-watching-azores
+type: main
+---

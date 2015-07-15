@@ -1,6 +1,9 @@
 .portfolio-modal {
 	padding:0!important;
 	margin:0!important;
+
+	
+
 	.modal-content{
 	  	border-radius: 0;
 		background-clip: border-box;
@@ -95,7 +98,7 @@
 			position:relative;
 			z-index: 2;
 			h1{
-				text-transform:uppercase;
+				//text-transform:uppercase;
 				font-weight:700;
 				margin-bottom:15px;
 				line-height:1.5;
@@ -117,7 +120,8 @@
 			}
 
 			.proj-desc{
-				text-align:left;				
+				text-align:left;	
+				@include generic-links();			
 
 				h2{
 					border-bottom:1px solid $input-border;

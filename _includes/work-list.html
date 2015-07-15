@@ -1,7 +1,7 @@
 <div class="row no-pad" id="Container">
 
   <!--LIST-->
-  {% for work in site.portfolio %}
+  {% for work in site.portfolio reversed  %}
     <!-- Set test var to false -->
     {% assign test = false %}
 
@@ -17,13 +17,10 @@
     {% endif %}
 
    {% if test %}
-    <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }}" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
+    <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
       <div class="work-item">
         <div class="work-img">
-
-          {% for image in work.images limit:1 %}
-            <img src="{{ site.baseurl }}{{ image.url }}" alt="{{image.alt}}" class="img-responsive full-width">
-          {% endfor %}
+          <img src="/images/portfolio/{{ work.thumbnail[0].url }}" alt="{{ work.thumbnail[0].alt}}" class="img-responsive full-width">
         </div>
         <div class="work-text">
           <h3>{{ work.title }}</h3>

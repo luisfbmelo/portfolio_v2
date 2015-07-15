@@ -22,5 +22,6 @@ $(".portfolio-carousel").owlCarousel({
 	      "<i class='fa fa-chevron-left'></i>",
 	      "<i class='fa fa-chevron-right'></i>"
       ],
+      itemsScaleUp:true
  
   });

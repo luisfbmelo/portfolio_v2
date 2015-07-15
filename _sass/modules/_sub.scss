@@ -30,4 +30,8 @@
 .sub-section{
 	background-color:$sub-bg;
 	padding:60px 0;
+
+	&.portfolio-section{
+		padding-bottom:0;
+	}
 } 
