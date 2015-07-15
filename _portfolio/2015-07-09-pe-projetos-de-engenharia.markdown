@@ -22,6 +22,7 @@ classes:
 - design
 permalink: pe-projetos-de-engenharia
 type: main
+ext-url: www.costapoim.pt
 ---
 PE - Projetos de Engenharia is a company focused in construction projets, coordination and their supervision.
 
