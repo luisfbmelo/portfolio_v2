@@ -19,7 +19,7 @@ thumbnail:
 categories:
 - Photography
 classes:
-- Photo
+- photo
 permalink: folk-group-doce-esperança
 type: main
 ext-url: www.behance.net/gallery/19590197/Grupo-Folclorico-Doce-Esperanca
