@@ -10,7 +10,7 @@ images:
 - url: bodas/3.jpg
   alt: Front
 thumbnail:
-- url: bodas/1.jpg
+- url: bodas/thumb/1.jpg
   alt: Invite thumbnail
 categories:
 - Design

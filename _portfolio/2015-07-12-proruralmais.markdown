@@ -10,7 +10,7 @@ images:
 - url: proruralmais/5.jpg
   alt: Website on a Smartphone
 thumbnail:
-- url: proruralmais/1.jpg
+- url: proruralmais/thumb/1.jpg
   alt: Proruralmais thumbnail
 categories:
 - Code

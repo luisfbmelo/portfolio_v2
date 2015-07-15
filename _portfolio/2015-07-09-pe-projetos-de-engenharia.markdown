@@ -12,7 +12,7 @@ images:
 - url: pe/4.jpg
   alt: Multiple screens
 thumbnail:
-- url: pe/1.jpg
+- url: pe/thumb/1.jpg
   alt: PE thumbnail
 categories:
 - Code

@@ -6,7 +6,7 @@ images:
 - url: photo/sao-miguel.jpg
   alt: São Miguel Island - Azores
 thumbnail:
-- url: photo/sao-miguel.jpg
+- url: photo/thumb/sao-miguel.jpg
   alt: São Miguel Island - Azores
 categories:
 - Photography

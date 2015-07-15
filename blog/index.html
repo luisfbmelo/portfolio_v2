@@ -14,7 +14,7 @@ masterClass: blog-top
 						<figure>
 							<a href="{{site.baseurl}}{{ post.url }}">
 								<div class="post-image-overlay"><span>See more</span></div>
-								<img src="/images/blog/{{ post.thumbnail[0].url }}" alt="{{ post.thumbnail[0].alt }}" class="img-responsive full-width">
+								<img src="{{ post.thumbnail[0].url }}" alt="{{ post.thumbnail[0].alt }}" class="img-responsive full-width">
 							</a>
 						</figure>
 						<div class="post-summary">
@@ -36,7 +36,7 @@ masterClass: blog-top
 				{% endif %}
 
 				{% if loopindex_md == 0 %}
-					<div class="clearfix visible-md"></div>
+					<div class="clearfix visible-md visible-lg"></div>
 				{% endif %}
 
 			{% endfor %}

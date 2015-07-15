@@ -6,7 +6,7 @@ images:
 - url: toque/1.jpg
   alt: Platform
 thumbnail:
-- url: toque/1.jpg
+- url: toque/thumb/1.jpg
   alt: Toque Reservado thumbnail
 categories:
 - Code

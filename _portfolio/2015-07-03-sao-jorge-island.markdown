@@ -6,7 +6,7 @@ images:
 - url: photo/sao-jorge.jpg
   alt: São Jorge Island - Azores
 thumbnail:
-- url: photo/sao-jorge.jpg
+- url: photo/thumb/sao-jorge.jpg
   alt: São Jorge Island - Azores
 categories:
 - Photography

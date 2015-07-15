@@ -6,7 +6,7 @@ images:
 - url: photo/sunset.jpg
   alt: Sunset - Azores
 thumbnail:
-- url: photo/sunset.jpg
+- url: photo/thumb/sunset.jpg
   alt: Sunset - Azores
 categories:
 - Photography

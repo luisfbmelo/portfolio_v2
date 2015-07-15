@@ -10,7 +10,7 @@ images:
 - url: sismo/3.jpg
   alt: Video
 thumbnail:
-- url: sismo/1.jpg
+- url: sismo/thumb/1.jpg
   alt: Project thumbnail
 categories:
 - Code

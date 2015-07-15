@@ -6,7 +6,7 @@ images:
 - url: photo/dolphins.jpg
   alt: My Paradise - Azores
 thumbnail:
-- url: photo/dolphins.jpg
+- url: photo/thumb/dolphins.jpg
   alt: My Paradise - Azores
 categories:
 - Photography

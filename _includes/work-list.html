@@ -1,35 +1,47 @@
 <div class="row no-pad" id="Container">
 
   <!--LIST-->
-  {% for work in site.portfolio reversed  %}
-    <!-- Set test var to false -->
-    {% assign test = false %}
 
-    <!-- Test if there is any TYPE as argument -->
-    {% if include.type == null %}
-      {% assign test = true %}
-    {% else %}
+  {% if include.type == 'main' %}
+    {% assign main_posts = site.portfolio | group_by: "type" %}
 
-      <!-- If there is a TYPE, compare with work item -->
-      {% if work.type == include.type %}
-        {% assign test = true %}
-      {% endif %}  
-    {% endif %}
+    {% for types in main_posts  %}
 
-   {% if test %}
-    <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
-      <div class="work-item">
-        <div class="work-img">
-          <img src="/images/portfolio/{{ work.thumbnail[0].url }}" alt="{{ work.thumbnail[0].alt}}" class="img-responsive full-width">
-        </div>
-        <div class="work-text">
-          <h3>{{ work.title }}</h3>
-          <footer>{{ work.categories | join:" / " }}</footer>
+      {% if types.name == 'main'  %}
+        {% for work in types.items reversed %}
+
+          <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
+            <div class="work-item">
+              <div class="work-img">
+                <img src="/images/portfolio/{{ work.thumbnail[0].url }}" alt="{{ work.thumbnail[0].alt}}" class="img-responsive full-width">
+              </div>
+              <div class="work-text">
+                <h3>{{ work.title }}</h3>
+                <footer>{{ work.categories | join:" / " }}</footer>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+
+  {% if include.type == null %}
+    {% for work in site.portfolio reversed %}
+
+      <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
+        <div class="work-item">
+          <div class="work-img">
+            <img src="/images/portfolio/{{ work.thumbnail[0].url }}" alt="{{ work.thumbnail[0].alt}}" class="img-responsive full-width">
+          </div>
+          <div class="work-text">
+            <h3>{{ work.title }}</h3>
+            <footer>{{ work.categories | join:" / " }}</footer>
+          </div>
         </div>
       </div>
-    </div>
-    {% endif %}
-
-  {% endfor %}
+    {% endfor %}
+  {% endif %}
 
 </div>

@@ -6,7 +6,7 @@ images:
 - url: photo/boca-do-inferno.jpg
   alt: Boca do inferno
 thumbnail:
-- url: photo/boca-do-inferno.jpg
+- url: photo/thumb/boca-do-inferno.jpg
   alt: Boca do inferno
 categories:
 - Photography

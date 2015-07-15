@@ -19,8 +19,16 @@ comments: true
 		  	</header>
 
 			<article class="post-content">
-				{{ content }}
+				{{ content | emojify }}
 			</article>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="post-cats">
+				Tags: {{ page.categories | join:", " }}
+			</div>
 		</div>
 	</div>
 

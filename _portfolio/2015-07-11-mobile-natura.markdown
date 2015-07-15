@@ -10,7 +10,7 @@ images:
 - url: mobile-natura/3.jpg
   alt: GeoBase Data
 thumbnail:
-- url: mobile-natura/natura-logo.jpg
+- url: mobile-natura/thumb/natura-logo.jpg
   alt: Mobile Natura thumbnail
 categories:
 - Code

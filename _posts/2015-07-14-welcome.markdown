@@ -6,22 +6,21 @@ date:   2015-07-14 23:22:00
 categories:
 - generic
 images: 
-- url: 2015-07-14-welcome/welcome.jpg
+- url: /images/blog/2015-07-14-welcome/welcome.jpg
   alt: Welcome
 thumbnail:
-- url: 2015-07-14-welcome/thumb/welcome_thumb.jpg
+- url: /images/blog/2015-07-14-welcome/thumb/welcome_thumb.jpg
   alt: Welcome
 ---
 <p class="text-center">Hello! Welcome to my fresh and new website!</p>
 
 <!--more-->
 ![Welcome!](/images/blog/2015-07-14-welcome/welcome.jpg)
-Finally, the old website goes out and here comes the new one. This time, all content is responsive and easily accessible. It has been a long journey since the last time I developed the first version, I mean, three years ago. A lot has changed, technology evolved and so did design. It is extremely important to keep up with this evolution and make our work even better.
 
-It is time to start from zero, and what I intend to do is to, not only share my work, but also some of my knowledge that can, somehow, help you in the future. Or better yet, I will learn from your experiences also. All contributions are welcome, since this is why we are here in this world. The world isn't me, it's us.
+Out with the old, and in with the new! It has been a long journey, since I first developed my website, three years ago. A lot has changed, technology has evolved and, so too, has design. It is very important to keep up with the "industry", its recent trends and to evolve accordingly.
 
-This section will be like a conversation in a coffe shop, where I will share the my design and development processes and some possible solutions that I find that work for me, and probably for you too.
+So, it is time to start from scratch. A version 2.0. This website is both responsive and easily accessible. The site will allow me to, not only, share my work and knowledge, but also assist you in the future. And I also intend to learn from your experiences, so all contributions are invited and welcome.  
 
-With this, I invite you to start following my website and comment as you wish, contributing to the community.
+This will be my "coffee shop": a place to visit, share my design and development strategies, discover solutions and receive feedback from other like-minded users. I invite you to follow my website, comment and contribute to my online community. 
 
-Oh, and feel free to share if you like :)
+Oh, and feel free to share if you wish :smirk:

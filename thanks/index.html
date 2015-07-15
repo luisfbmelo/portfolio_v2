@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+<section class="thanks-container">
+	<div class="thanks-box container">
+		<div class="check-icon">
+			<i class="fa fa-check"></i>
+		</div>
+		<p>
+			Thank you for your contact. I will reply as soon as possible.
+		</p>
+
+		<div class="go-back">
+			<a href="{{site.url}}" class="cta to-dark">Go back</a>
+		</div>
+	</div>
+	<div class="redirect-text">
+		You will be redirected to the homepage in <span id="sec">10</span> seconds
+	</div>
+</section>
+
+<script>
+window.onload = function(e){ 
+	var timerEl = document.getElementById("sec");
+
+	if (timerEl){
+		var seconds = 10;
+		var redirectTimer = setInterval(function(){redTimer()}, 1000);
+
+		function redTimer() {
+		    seconds--;
+		    timerEl.innerHTML = seconds;
+		    if (seconds<=0){
+		    	clearInterval(redirectTimer);
+		    	window.location.href = "/";
+		    }
+		}
+	}
+}
+</script>

@@ -6,7 +6,7 @@ images:
 - url: untitled/1.jpg
   alt: Game Level 1
 thumbnail:
-- url: untitled/1.jpg
+- url: untitled/thumb/1.jpg
   alt: Game Level 1
 categories:
 - Code

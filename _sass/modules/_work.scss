@@ -3,6 +3,10 @@
 	@include user-select(none);
 }
 
+.proj-details-modal{
+	overflow:hidden!important;
+}
+
 .work{
 	padding:60px 0;	
 }
@@ -10,13 +14,11 @@
 	position:relative;
 
 	.work-img{
-		overflow:hidden;
+		
 		img {
 			@include transition(all 200ms ease);
-			@include transform-scale(1,1);
-			width:110%;
 		}
-	}
+	}  
 
 	.work-text{
 		position:absolute;

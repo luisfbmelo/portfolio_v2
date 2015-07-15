@@ -6,7 +6,7 @@ images:
 - url: photo/terceira.jpg
   alt: Terceira Island - Azores
 thumbnail:
-- url: photo/terceira.jpg
+- url: photo/thumb/terceira.jpg
   alt: Terceira Island - Azores
 categories:
 - Photography

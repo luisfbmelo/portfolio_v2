@@ -6,7 +6,7 @@ images:
 - url: photo/lagoa-do-fogo.jpg
   alt: Lagoa do Fogo - Azores
 thumbnail:
-- url: photo/lagoa-do-fogo.jpg
+- url: photo/thumb/lagoa-do-fogo.jpg
   alt: Lagoa do Fogo - Azores
 categories:
 - Photography
