@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Boca do inferno - Azores"
-date:   2015-07-06
+date:   2015-07-04
 images: 
 - url: photo/boca-do-inferno.jpg
   alt: Boca do inferno
@@ -13,5 +13,4 @@ categories:
 classes:
 - photo
 permalink: boca-do-inferno
-type: main
 ---
