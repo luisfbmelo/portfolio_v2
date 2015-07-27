@@ -24,6 +24,6 @@ permalink: pe-projetos-de-engenharia
 type: main
 ext-url: www.costapoim.pt
 ---
-PE - Projetos de Engenharia is a company focused in construction projets, coordination and their supervision.
+Founded in 2000, PE is a civil construction firm whose projects involve the coordination, supervision and auditing of construction projects.
 
 *Tech: PHP (Yii Framework)*

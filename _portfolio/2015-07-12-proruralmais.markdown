@@ -22,6 +22,6 @@ permalink: proruralmais
 type: main
 ext-url: proruralmais.azores.gov.pt
 ---
-Project developed during my intership at <a href="http://cybermap.pt/" title="Cybermap Homepage" target="_blank">Cybermap - Internet e Sistemas de Informação</a> with the intent to provide specific information about the Prorural+ program, by presenting oficial documents, news, alerts and other content.
+A project developed during my internship at at <a href="http://cybermap.pt/" title="Cybermap Homepage" target="_blank">Cybermap - Internet e Sistemas de Informação</a> , this project page provides specific information/documents and official press releases, news, alerts and other content for the Prorural+ program.
 
 *Tech: DotNetNuke CMS*

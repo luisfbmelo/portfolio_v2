@@ -15,6 +15,6 @@ classes:
 permalink: untitled
 ext-url: www.luisfbmelo.com/untitled
 ---
-Untitled is an arcade game where you have to buy every single item and complete all challenges. And to completely finish the game, you even have to buy the victory.
+"Untitled" is an arcade game where players buy every item and complete all challenges. To win the game, players have to even buy the victory.
 
 *Tech: ActionScript*

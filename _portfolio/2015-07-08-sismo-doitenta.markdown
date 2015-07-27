@@ -20,10 +20,8 @@ permalink: sismo-doitenta
 type: main
 ext-url: www.sismodoitenta.com
 ---
-Sismo d'Oitenta consists in a project aimed to create an inventory with the highest number of testimonies from the earthquake survivors occurred on january 1, 1980 in the Azores.
+A project developed by four friends, the "Sismo d’Oitenta" website was developed to archive the testimonies and stories of survivors who experienced the 1 January 1980 Azores earthquake that destoyed the historic centre of Angra do Heroísmo, and affected the islands of Terceira, São Jorge and Graciosa. 
 
-This platform provides several ways to view the event, such as, photo comparision, victims testimonies, and recorded testimonies.
-
-The project was developed by four friends.
+The platform provides interesting techniques to promote understanding of the event, including photo comparisons, victim testimonies and eyewitness accounts.
 
 *Tech: HTML, CSS, Javascript & PHP*

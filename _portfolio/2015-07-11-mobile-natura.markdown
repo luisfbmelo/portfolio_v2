@@ -22,6 +22,6 @@ permalink: mobile-natura
 type: main
 ext-url: www.behance.net/gallery/27464507/Mobile-Natura
 ---
-Mobile Natura presents itself as a technological and criative solution that results from the discovery of a research opportunity associated with the deficit of autonomous means to increase parks, reserves and natural areas visitors’ knowledge and awareness. 
+Mobile Natura is a creative, technological solution that assists visitors in being autonomous during their visits to parks, reserves and natural areas. 
 
-This was developed in the context of AzorIT Systems, a company with its goals directed towards innovation in the new technologies field. 
+The application was developed in the context of AzorIT Systems, a techonlogy firm pioneering innovative solutions for the public sector, education and culture, commerce and communication.

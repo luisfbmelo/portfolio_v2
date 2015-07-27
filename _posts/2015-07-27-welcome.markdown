@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome!"
 page-section: Blog
-date:   2015-07-14 23:22:00
+date:   2015-07-27 23:22:00
 categories:
 - generic
 images: 

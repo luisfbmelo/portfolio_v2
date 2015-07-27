@@ -17,6 +17,9 @@
 		
 		img {
 			@include transition(all 200ms ease);
+		  	width: 110%;
+			margin-left: -5%;
+			max-width:none!important;
 		}
 	}  
 
