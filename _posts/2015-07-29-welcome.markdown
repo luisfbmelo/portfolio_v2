@@ -2,20 +2,20 @@
 layout: post
 title:  "Welcome!"
 page-section: Blog
-date:   2015-07-27 23:22:00
+date:   2015-07-29 23:22:00
 categories:
 - generic
 images: 
-- url: /images/blog/2015-07-14-welcome/welcome.jpg
+- url: /images/blog/2015-07-29-welcome/welcome.jpg
   alt: Welcome
 thumbnail:
-- url: /images/blog/2015-07-14-welcome/thumb/welcome_thumb.jpg
+- url: /images/blog/2015-07-29-welcome/thumb/welcome_thumb.jpg
   alt: Welcome
 ---
 <p class="text-center">Hello! Welcome to my fresh and new website!</p>
 
 <!--more-->
-![Welcome!](/images/blog/2015-07-14-welcome/welcome.jpg)
+![Welcome!](/images/blog/2015-07-29-welcome/welcome.jpg)
 
 Out with the old, and in with the new! It has been a long journey, since I first developed my website, three years ago. A lot has changed, technology has evolved and, so too, has design. It is very important to keep up with the "industry", its recent trends and to evolve accordingly.
 

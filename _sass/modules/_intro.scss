@@ -8,13 +8,13 @@
 
 /*INTRO*/
 .intro-section{
+	position:relative;
+
 	background-image: url(../images/bg_intro.jpg);
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position: center;
-	background-attachment: fixed;
 
-	position:relative;
 
 	.intro-middle-container{
 		position:absolute;
