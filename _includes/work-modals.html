@@ -13,70 +13,68 @@
       {% endif %}  
     {% endif %}
 
-   {% if test %}
+    <!--SHOW ONLY THOSE ARE ARE RELATED TO A GIVEN TYPE ON INCLUDE-->
+    {% if test %}
+       <!--CHECK IF HAS PHOTO CAT -->
+       {% assign isPhoto=false %}
+
+       {% for cat in work.classes %}
+        {% if cat == "photo" %}
+          {% assign isPhoto = true %}
+        {% endif %}
+       {% endfor %}
+
+      <div class="portfolio-modal modal fade" id="modal-{{work.permalink}}" tabindex="-1" role="dialog" aria-labelledby="{{work.permalink}}">
+        <div class="modal-content {% if isPhoto == true %}photo-proj{% endif %}">
+          <div class="fake-backgrop"></div>
+
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 col-lg-offset-1">
+
+                <!--BODY-->
+                <div class="modal-body">
+                  <h1>{{ work.title }}</h1>
+                  <p class="proj-intro-text">{{ work.categories | join:" / " }}</p>
+
+                  <!--CAROUSEL-->              
+
+                  <div id="owl-{{work.permalink}}" class="owl-carousel owl-theme portfolio-carousel">              
+                    {% for image in work.images %}
+                      <div class="item"><img src="/images/portfolio/{{ image.url }}" alt="{{image.alt}}"></div>
+                    {% endfor %}
+                  </div>
 
 
-
-   <!--CHECK IF HAS PHOTO CAT -->
-   {% assign isPhoto=false %}
-
-   {% for cat in work.classes %}
-    {% if cat == "photo" %}
-      {% assign isPhoto = true %}
-    {% endif %}
-   {% endfor %}
-
-  <div class="portfolio-modal modal fade" id="modal-{{work.permalink}}" tabindex="-1" role="dialog" aria-labelledby="{{work.permalink}}">
-    <div class="modal-content {% if isPhoto == true %}photo-proj{% endif %}">
-      <div class="fake-backgrop"></div>
-
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl"></div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-lg-offset-1">
-
-            <!--BODY-->
-            <div class="modal-body">
-              <h1>{{ work.title }}</h1>
-              <p class="proj-intro-text">{{ work.categories | join:" / " }}</p>
-
-              <!--CAROUSEL-->              
-
-              <div id="owl-{{work.permalink}}" class="owl-carousel owl-theme portfolio-carousel">              
-                {% for image in work.images %}
-                  <div class="item"><img src="/images/portfolio/{{ image.url }}" alt="{{image.alt}}"></div>
-                {% endfor %}
-              </div>
-
-
-              <!--FULL DESC-->
-              <div class="row complete-desc">
-              {% if work.content.size > 1 %}
-                <div class="{% if work.ext-url %}col-md-9{% else %}col-xs-12{% endif %} proj-desc">
-                  <h2>
-                    Description
-                  </h2>
-                  <p>
-                    {{ work.content }}
-                  </p>
+                  <!--FULL DESC-->
+                  <div class="row complete-desc">
+                  {% if work.content.size > 1 %}
+                    <div class="{% if work.ext-url %}col-md-9{% else %}col-xs-12{% endif %} proj-desc">
+                      <h2>
+                        Description
+                      </h2>
+                      <p>
+                        {{ work.content }}
+                      </p>
+                    </div>
+                    {% endif %}
+                    {% if work.ext-url %}
+                    <div class="{% if work.content.size > 1 %}col-md-3{% else %}col-xs-12 aCenter{% endif %} proj-btns">
+                      <a href="http://{{ work.ext-url }}" target="_blank" class="cta to-dark" rel="external">View project</a>
+                    </div>
+                    {% endif %}
+                  </div>
                 </div>
-                {% endif %}
-                {% if work.ext-url %}
-                <div class="{% if work.content.size > 1 %}col-md-3{% else %}col-xs-12 aCenter{% endif %} proj-btns">
-                  <a href="http://{{ work.ext-url }}" target="_blank" class="cta to-dark" rel="external">View project</a>
-                </div>
-                {% endif %}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  {% endif %}
+    {% endif %}
 {% endfor %}

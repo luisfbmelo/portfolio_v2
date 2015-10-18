@@ -17,7 +17,6 @@ categories:
 classes:
 - design
 permalink: 25th-silver-wedding-anniversary
-type: main
 ext-url: www.behance.net/gallery/19330847/Bodas-de-Prata-25th-Silver-Wedding-Anniversary
 ---
-The design of an invitation for the 25th Silver Wedding Anniversary of Teresa & José.
+The design of an invitation for the 25th Silver Wedding Anniversary of Teresa & José. 

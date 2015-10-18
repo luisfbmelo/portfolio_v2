@@ -8,7 +8,7 @@ masterClass: blog-top
 <section class="sub-section blog-wrapper">
 	<div class="container">
 		<div class="row blog-posts">
-			{% for post in paginator.posts %}
+			{% for post in paginator.posts | sort:"date" %}
 				<div class="col-xs-12 col-sm-6 col-md-4">
 					<div class="post-container">
 						<figure>

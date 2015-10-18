@@ -10,7 +10,7 @@ thumbnail:
   alt: Toque Reservado thumbnail
 categories:
 - Code
-- design
+- Design
 classes:
 - code
 - design
