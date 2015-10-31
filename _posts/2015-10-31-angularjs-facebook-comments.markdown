@@ -28,7 +28,7 @@ The thing is, Facebook loads it's comments asynchronous, and so does AngularJS b
 There are several steps needed to solve the problem:
 
 * [Create a Facebook API Key](https://developers.facebook.com/){:target="_blank"}{:rel="external"} for your application;
-* Place the provided code from Facebok inside the body tag;
+* Place the provided code from Facebook inside the body tag;
 * Make use of AngularJS directives to render the comments section.
 
 ###Create a Facebook API Key
@@ -40,7 +40,7 @@ There is a simple process to create a API Key:
 4. Provide your app name and choose the category.
 
 ###Place Facebook code inside the body tag
-In order to initialize the Facebook Javascript SDK, it is necessary to place a specific code block at the begining of the *<body>* tag:
+In order to initialize the Facebook Javascript SDK, it is necessary to place a specific code block at the begining of the *\<body\>* tag:
 
 ~~~~~~~~
 <!--FACEBOOK SDK-->
@@ -64,7 +64,7 @@ In order to initialize the Facebook Javascript SDK, it is necessary to place a s
 <!--END FACEBOOK-->
 ~~~~~~~~
 
-Have in mind that you must replace **\<YOUR API KEY\>** with the API key provided at the [Facebook developers section](https://developers.facebook.com/ "Facebook developers section"), and the **<lan_LAN>** with the correct language that will be used for the localization (e.i., "en_EN").
+Have in mind that you must replace *\<YOUR API KEY\>* with the API key provided at the [Facebook developers section](https://developers.facebook.com/ "Facebook developers section"){:target="_blank"}{:rel="external"}, and the *\<lan_LAN\>* with the correct language that will be used for the localization (e.g., "en_EN").
 
 ###AngularJS directives to render the comments section
 Now that we have the required scripts to use the Facebook API, it is time to create our AngularJS directive for the comments section.
@@ -86,7 +86,7 @@ appDirectives.directive('facebookComments', ['$location', function ($location) {
 }]);
 ~~~~~~~~
 
-In the previous code, we are creating a directive as an element **(E)** with a template that will have the child directive. In order to avoid any scope conflicts, this directive will have a isolated one.
+In the previous code, we are creating a directive as an element *(E)* with a template that will have the child directive. In order to avoid any scope conflicts, this directive will have a isolated one.
 The most important part of this code is the link function. As this function will only be executed after finish compiling the directive, here we set the current path through the current absolute URL. This information will be used to inform the Facebook plugin which webpage the comments will be associated to.
 
 The second step consists in the directive template:
@@ -95,15 +95,13 @@ The second step consists in the directive template:
 <div class="fb-comments" dyn-fb-comment-box page-href="{{curPath}}" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
 ~~~~~~~~  
 
-
 In this case, we are going to use this template that will have as attributes the required parameters to initialize the comments plugin. As you can see, we are defining a set of important parameters:
 
 * **curPath** variable from the parent directive scope to inform what will be the URL for the plugin;
 * **data-numposts** that will set the number of posts to be shown;
 * **data-colorscheme** to set the theme for the plugin;
 * **data-width** to 100% to make it responsive.
-* Make this div a directive through the **dyn-fb-comment-box** attribute (directive name as attribute - **A**) responsible for the plugin rendering.  <br /><br />
-
+* Make this div a directive through the **dyn-fb-comment-box** attribute (directive name as attribute - *A*) responsible for the plugin rendering.
 
 With this, it is time to set the child directive:
 
@@ -144,13 +142,16 @@ appDirectives.directive('dynFbCommentBox',['$timeout', function ($timeout) {
     };
 }]);
 ~~~~~~~~  
-
-
+<br/>
 Let's analyze this directive.
-As I stated before, this will be an attribute directive for the sake of simplicity with an isolated scope to avoid any conflicts with the parent. This directive has the purpose to watch/observe the **pageHref** attribute to understand when the page has changed and gather all the necessary information from the directive attributes. Each attribute will then be passed as parameters to the function **createHtml()**
+As I stated before, this will be an attribute directive for the sake of simplicity with an isolated scope to avoid any conflicts with the parent. This directive has the purpose to watch/observe the *pageHref* attribute to understand when the page has changed and gather all the necessary information from the directive attributes. Each attribute will then be passed as parameters to the function *createHtml()*
 
-This function will then overwrite the original html with a markup that is more "Facebook plugin friendly", i.e., to be recognized by the Facebook API and render the final script.
+This function will then overwrite the original html with a markup that is more *"Facebook plugin friendly"*, i.e., to be recognized by the Facebook API and render the final script.
 
-In the end, we must call the **FB.XFBML.parse(\<HTML\>)** to force the plugin to render after all the html and scripts finalize all rendering. To do this, the **$timeout()** comes to action. By setting no delay, we can ensure that all the code inside it will be executed after everything finishes. Otherwise, the plugin would render, but since AngularJS is on its digest cycle and still rendering, the result will be a blank space.
+In the end, we must call the *FB.XFBML.parse(\<HTML\>)* to force the plugin to render after all the html and scripts finalize all rendering. To do this, the *$timeout()* comes to action. By setting no delay, we can ensure that all the code inside it will be executed after everything finishes. Otherwise, the plugin would render, but since AngularJS is on its digest cycle and still rendering, the result will be a blank space.
 
 I hope this small tutorial will help anyone in need and difficulties with this plugin, and if you have any other better solutions, please share with everyone in the comments section bellow :smiley:.
+
+<br/>
+**Resources**   
+*Project Repo:* [Github](https://github.com/luisfbmelo/artistasluso){:target="_blank"}{:rel="external"}
