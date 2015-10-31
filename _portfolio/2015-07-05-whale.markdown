@@ -13,5 +13,4 @@ categories:
 classes:
 - photo
 permalink: whale-watching-azores
-type: main
 ---

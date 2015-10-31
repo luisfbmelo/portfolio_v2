@@ -1,0 +1,27 @@
+---
+layout: default
+title:  "Baptism - Events"
+date:   2015-07-08
+images: 
+- url: baptism/1.jpg
+  alt: Francisca
+- url: baptism/2.jpg
+  alt: Francisca
+- url: baptism/3.jpg
+  alt: Henrique
+- url: baptism/4.jpg
+  alt: Henrique
+- url: baptism/5.jpg
+  alt: Francisca
+- url: baptism/6.jpg
+  alt: Henrique
+thumbnail:
+- url: baptism/thumb/1.jpg
+  alt: Baptism - Events
+categories:
+- Photography
+classes:
+- photo
+permalink: baptism-events
+type: main
+---

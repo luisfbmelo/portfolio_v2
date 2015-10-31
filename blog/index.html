@@ -20,7 +20,7 @@ masterClass: blog-top
 						<div class="post-summary">
 							<div class="post-date">{{ post.date | date: '%B %d, %Y' }}</div>						
 							<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h4>
-							<article>{{ post.excerpt | strip_html | replace: '&nbsp;', ' ' | truncate: 150 }}</article>
+							<article>{{ post.excerpt | strip_html | replace: '&nbsp;', ' ' | truncate: 120 }}</article>
 						</div>
 
 						<div class="post-cats">
