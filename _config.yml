@@ -41,3 +41,6 @@ sass:
 
 #emoji
 emoji_dir: /images/emoji
+
+gems:
+  - jekyll-sitemap
