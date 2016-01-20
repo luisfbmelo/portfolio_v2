@@ -20,7 +20,6 @@ var portOptions = {
 
 function buildPortOwl(){
   $(".portfolio-carousel").each(function(){
-    console.log($(this));
     $(this).owlCarousel(portOptions);
   });
 }
