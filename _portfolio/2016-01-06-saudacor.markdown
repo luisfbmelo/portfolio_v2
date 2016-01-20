@@ -1,0 +1,33 @@
+---
+layout: default
+title:  "Saudaçor S.A."
+date:   2016-01-06
+images: 
+- url: saudacor/1.jpg
+  alt: Website on a Laptop
+- url: saudacor/2.jpg
+  alt: Website on a Laptop
+- url: saudacor/3.jpg
+  alt: Website on a Tablet
+- url: saudacor/4.jpg
+  alt: Website on a Smartphone
+- url: saudacor/5.jpg
+  alt: Website on a Smartphone
+thumbnail:
+- url: saudacor/thumb/3.jpg
+  alt: Saudaçor thumbnail
+categories:
+- Code
+- Design
+classes:
+- code
+- design
+permalink: saudacor
+type: main
+ext-url: www.saudacor.pt
+---
+Saudaçor SA is an anonymous society corporation of stricly public funds, that provides services of general economic interest in the health field, driving the planning and management of regional health care system and information systems, infrastructure and facilities.
+
+
+
+*Tech: HTML5, CSS3 - SASS, Javascript, PHP - Wordpress (Theme from scratch)* 

@@ -1,4 +1,13 @@
-{% for work in site.portfolio %}
+<!-- ASSIGN LIMIT IF FULL -->
+{% if include.type == null %}
+  {% assign limit = 12 %}
+{% else %}
+  {% assign limit = null %}
+{% endif %}
+
+{% assign items = site.portfolio | sort: 'date' | reverse %}
+
+{% for work in items limit:limit%}
     <!-- Set test var to false -->
     {% assign test = false %}
 
@@ -24,7 +33,7 @@
         {% endif %}
        {% endfor %}
 
-      <div class="portfolio-modal modal fade" id="modal-{{work.permalink}}" tabindex="-1" role="dialog" aria-labelledby="{{work.permalink}}">
+      <div class="portfolio-modal modal fade" id="proj-{{work.permalink}}" tabindex="-1" role="dialog" aria-labelledby="{{work.permalink}}">
         <div class="modal-content {% if isPhoto == true %}photo-proj{% endif %}">
           <div class="fake-backgrop"></div>
 

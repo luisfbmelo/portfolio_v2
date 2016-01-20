@@ -1,0 +1,5 @@
+---
+layout: nill
+---
+{% assign items = site.portfolio | sort: 'date' | reverse %}
+{{ items | jsonify }}

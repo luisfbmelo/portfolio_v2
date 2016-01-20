@@ -36,6 +36,7 @@
   "browser": {
     "owlcarousel": "./js/plugins/owlcarousel.js",
     "mixitup": "./js/plugins/mixitup.js",
+    "ejs": "./js/plugins/ejs.js",
     "bootstrap": "./js/plugins/bootstrap.js"
   },
   "browserify": {
@@ -58,6 +59,9 @@
       "depends": [
         "jquery:jQuery"
       ]
+    },
+    "ejs": {
+      "exports": "ejs"
     },
     "bootstrap": {
       "exports": "bootstrap",

@@ -1,4 +1,6 @@
 <div class="row no-pad" id="Container">
+  
+  {% assign limit = 12 %}
 
   <!--LIST-->
 
@@ -8,9 +10,9 @@
     {% for types in main_posts  %}
 
       {% if types.name == 'main'  %}
-        {% for work in types.items reversed %}
+        {% for work in types.items reversed%}
 
-          <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
+          <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#proj-{{work.permalink}}">
             <div class="work-item">
               <div class="work-img">
                 <img src="/images/portfolio/{{ work.thumbnail[0].url }}" alt="{{ work.thumbnail[0].alt}}" class="img-responsive full-width">
@@ -28,9 +30,10 @@
 
 
   {% if include.type == null %}
-    {% for work in site.portfolio reversed %}
+    {% assign items = site.portfolio | sort: 'date' | reverse %}
+    {% for work in items limit:limit %}
 
-      <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#modal-{{work.permalink}}">
+      <div class="col-xs-12 col-sm-6 col-md-3 mix {{ work.classes | join:" " }} proj-details-modal" data-toggle="modal" id="work-item-{{work.permalink}}" data-target="#proj-{{work.permalink}}">
         <div class="work-item">
           <div class="work-img">
             <img src="/images/portfolio/{{ work.thumbnail[0].url }}" alt="{{ work.thumbnail[0].alt}}" class="img-responsive full-width">
@@ -43,5 +46,21 @@
       </div>
     {% endfor %}
   {% endif %}
-
 </div>
+
+{% if include.type == null %}
+  {% if site.portfolio.size >= limit %}
+    <!-- LOAD MORE -->
+    <div class="container portfolio-more-button">
+      <!--More-->
+      <div class="row no-pad">
+        <!--CTA-->
+        <div class="cta-container">
+          <a href="#" title="More" class="cta to-dark load-more" data-current="{{ limit }}" data-limit="{{ limit }}" data-type="portfolio">
+            Load More
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

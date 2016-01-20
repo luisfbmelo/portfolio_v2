@@ -17,8 +17,7 @@ categories:
 classes:
 - code
 permalink: sismo-doitenta
-type: main
-ext-url: www.behance.net/gallery/14226947/Sismo-dOitenta
+ext-url: www.sismodoitenta.com
 ---
 A project developed by four friends, the "Sismo d’Oitenta" website was developed to archive the testimonies and stories of survivors who experienced the 1 January 1980 Azores earthquake that destoyed the historic centre of Angra do Heroísmo, and affected the islands of Terceira, São Jorge and Graciosa. 
 
