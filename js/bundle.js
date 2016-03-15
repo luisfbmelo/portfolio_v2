@@ -122,6 +122,9 @@ $(".load-more").on("click", function(e){
 	var limit = parseInt($(this).data('limit'));
 	var destList = $("#Container");
 
+	// Set loading for LOAD MORE BUTTON
+	isLoading($(this), true);
+
 	// If never requested
 	if (portfolio==null){
 		$.get("/portfolio/portfolio.json", function(data){
@@ -163,15 +166,32 @@ function printPortList(data, offset, limit, dest){
 	setCarousel(modalsHtml);
 }
 
+/**
+ * Check if there are more items. If not, remove button. Else, set button to default text
+ */
 function checkAvailability(el, offset, limit, obj){
 	if (obj!=null && offset+limit >= obj.length){
 		$(el).remove();
+	}else{
+
+		// Set loading for LOAD MORE BUTTON
+		isLoading($(el).find(".load-more"), false);
 	}
 }
 
+/**
+ * Reset carousels
+ */
 function setCarousel(){
 	owl.destroy();
 	owl.init();
+}
+
+/**
+ * Change LOAD MORE button text according to status
+ */
+function isLoading(el, status){
+	el.html((status) ? '<i class="fa fa-spinner animate-circle"></i>' : 'Load More');
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../plugins/ejs.js":9,"../plugins/mixitup.js":10,"./carousel.js":4,"jquery":13}],7:[function(require,module,exports){

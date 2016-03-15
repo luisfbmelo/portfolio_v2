@@ -26,8 +26,7 @@ permalink: saudacor
 type: main
 ext-url: www.saudacor.pt
 ---
-Saudaçor SA is an anonymous society corporation of stricly public funds, that provides services of general economic interest in the health field, driving the planning and management of regional health care system and information systems, infrastructure and facilities.
+Saudaçor, S.A. website design and development using Wordpress. Saudaçor is an anonymous society corporation of strictly public funds, that provides services of general economic interest in the health field. 
+This project was development while working at Saudaçor.
 
-
-
-*Tech: HTML5, CSS3 - SASS, Javascript, PHP - Wordpress (Theme from scratch)* 
+*Tech: HTML5, CSS3 - SASS, Javascript, Wordpress (Theme from scratch)* 

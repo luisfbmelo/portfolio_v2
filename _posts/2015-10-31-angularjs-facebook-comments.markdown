@@ -92,7 +92,9 @@ The most important part of this code is the link function. As this function will
 The second step consists in the directive template:
 
 ~~~~~~~~
+{% raw %}
 <div class="fb-comments" dyn-fb-comment-box page-href="{{curPath}}" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
+{% endraw %}
 ~~~~~~~~  
 
 In this case, we are going to use this template that will have as attributes the required parameters to initialize the comments plugin. As you can see, we are defining a set of important parameters:

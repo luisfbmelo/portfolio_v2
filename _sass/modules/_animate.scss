@@ -1,0 +1,9 @@
+@include keyframes(animate-circle){
+	from { @include transform-rotate(0); }
+	to { @include transform-rotate(360); }
+}
+
+
+.animate-circle{
+	@include animation(animate-circle 2s infinite linear);
+}
