@@ -42,6 +42,7 @@ $(".load-more").on("click", function(e){
 
 function printPortList(data, offset, limit, dest){
 	var data = {'result': data, 'offset': offset, 'limit': limit};
+
 	// Get List HTML
 	listHtml = new EJS({url: '/js/templates/worklist.ejs'}).render(data);	
 

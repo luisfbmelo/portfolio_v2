@@ -1,0 +1,47 @@
+---
+layout: default
+title:  "Portrait Photography"
+date:   2015-07-08
+images: 
+- url: portrait/1.jpg
+  alt: César e Mónica
+- url: portrait/2.jpg
+  alt: César e Mónica
+- url: portrait/3.jpg
+  alt: César e Mónica
+- url: portrait/4.jpg
+  alt: César e Mónica
+- url: portrait/5.jpg
+  alt: César e Mónica
+- url: portrait/6.jpg
+  alt: César e Mónica
+- url: portrait/7.jpg
+  alt: Primas
+- url: portrait/8.jpg
+  alt: Primas
+- url: portrait/9.jpg
+  alt: Primas
+- url: portrait/10.jpg
+  alt: Matilde
+- url: portrait/11.jpg
+  alt: Matilde
+- url: portrait/12.jpg
+  alt: Matilde
+- url: portrait/13.jpg
+  alt: Matilde
+- url: portrait/14.jpg
+  alt: Matilde
+- url: portrait/15.jpg
+  alt: Matilde
+- url: portrait/16.jpg
+  alt: Matilde
+thumbnail:
+- url: portrait/thumb/1.jpg
+  alt: Portrait
+categories:
+- Photography
+classes:
+- photo
+permalink: portrait-photography
+type: main
+---

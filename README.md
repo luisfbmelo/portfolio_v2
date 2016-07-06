@@ -7,10 +7,11 @@ This repo consists in the development of the second version of my personal portf
 
 To setup the development environment, it is necessary to install:
 - Ruby
-- Jekyll
+- Jekyll 3.x
 - Jekyll-sitemap
 - Gemoji
 - Jekyll-pagination
+- Jekyll-frontmatter-jsonify
 
 ##License
 The project is licensed under **The MIT License (MIT)**, see the LICENSE file for more details.

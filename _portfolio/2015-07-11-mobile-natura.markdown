@@ -19,7 +19,6 @@ classes:
 - code
 - design
 permalink: mobile-natura
-type: main
 ext-url: www.behance.net/gallery/27464507/Mobile-Natura
 ---
 Mobile Natura is a creative, technological solution that assists visitors in being autonomous during their visits to parks, reserves and natural areas. 

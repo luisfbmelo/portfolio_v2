@@ -1,5 +1,21 @@
 ---
-layout: nill
+layout: nil
 ---
 {% assign items = site.portfolio | sort: 'date' | reverse %}
-{{ items | jsonify }}
+[
+    {% for post in items %}
+        {
+          "title"    : {{ post.title | jsonify }},
+          "url"     : {{ post.url | jsonify }},
+          "date"     : {{ post.date | date: "%B %d, %Y" | jsonify }},
+          "content"  : {{ post.content | jsonify }},
+          "type"  : {{ post.type | jsonify }},
+          "permalink"  : {{ post.permalink | jsonify }},
+          "ext-url"  : {{ post.ext-url | jsonify }},
+          "images" : {{ post.images | jsonify }},
+          "thumbnail" : {{ post.thumbnail | jsonify }},
+          "classes" : {{ post.classes | jsonify }},
+          "categories" : {{ post.categories | jsonify }}
+        } {% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+] 

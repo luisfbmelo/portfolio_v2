@@ -44,3 +44,5 @@ emoji_dir: /images/emoji
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-frontmatter-jsonify
