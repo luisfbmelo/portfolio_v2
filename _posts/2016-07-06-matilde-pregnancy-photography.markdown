@@ -7,6 +7,9 @@ categories:
 - photography
 - portrait
 - pregnancy
+images: 
+- url: /images/blog/2016-07-06-matilde-pregnancy-photography/10.jpg
+  alt: Matilde - Pregnancy Photography
 thumbnail:
 - url: /images/blog/2016-07-06-matilde-pregnancy-photography/thumb/matilde.jpg
   alt: Matilde - Pregnancy Photography
