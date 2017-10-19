@@ -1,23 +1,24 @@
 ---
 layout: post
-title:  "AngularJS - Implementing Facebook Comments plugin"
+title:  "ReactJS - Server Side Rendering"
 page-section: Blog
-date:   2015-10-31 21:24:00
+date:   2017-10-19 22:30:00
 categories:
 - coding
-- angularjs
+- reactjs
 - devlog
+- ssr
 images: 
-- url: /images/blog/2015-10-31-angularjs-facebook-comments/angular-facebook-comments.jpg
-  alt: AngularJS and Facebook comments
+- url: /images/blog/2017-10-19-react-server-side-rendering/react-ssr.jpg
+  alt: ReactJS - Server Side Rendering
 thumbnail:
-- url: /images/blog/2015-10-31-angularjs-facebook-comments/thumb/angular-facebook-comments.jpg
-  alt: AngularJS and Facebook comments
+- url: /images/blog/2017-10-19-react-server-side-rendering/thumb/react-ssr.jpg
+  alt: ReactJS - Server Side Rendering
 ---
-<p class="text-center">I'm here to present to you a problem and solution that I encountered in my latest project, implementing Facebook Comments.</p>
+<p class="text-center">A NodeJS solution to implement Server Side Rendering in a ReactJS application without any extra framworks.</p>
 
 <!--more-->
-![Welcome!](/images/blog/2015-10-31-angularjs-facebook-comments/angular-facebook-comments.jpg)
+![Welcome!](/images/blog/2017-10-19-react-server-side-rendering/react-ssr.jpg)
 
 # Context
 Recently I developed an online platform that gathers a list of Portuguese descendent artists from all around the world for [Miraceta Arts](http://mirateca.com/ "Miraceta Arts"). One of the user stories for this project describes the need to provide a comment section for the events that are shown.
