@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "React Server Side Rendering - from v15 to v16"
+title:  "Server Side Rendering in ReactJS - from v15 to v16"
 page-section: Blog
 date:   2017-12-15 14:40:00
 categories:
@@ -137,6 +137,10 @@ So now, there is no `match()` method from react-router to help us in matching an
 In order to match the routes, create a new function inside the `app.use()` context:
 
 ```
+import { StaticRouter, matchPath } from 'react-router-dom';
+
+...
+
 app.use(function(req, res){
   // Create store with the middlewares that you need, the `createStore` method from Redux and your reducers
   const store = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
@@ -172,7 +176,7 @@ app.use(function(req, res){
 
 ```
 
-In this new version, `react-router-dom`, the new `react-router` package, instead of using `<Provider />`, we should use `<StaticRouter />` with all the routes as children.
+In this new version, `react-router-dom`, the new `react-router` package, instead of using the  `<RouterContext />`, we should use `<StaticRouter />` with all the routes as children.
 
 So now, in the `renderView()` function:
 
@@ -182,7 +186,7 @@ So now, in the `renderView()` function:
 
     const InitialView = (
       <Provider store={store}>
-        <StaticRouter context={context}>
+        <StaticRouter location={req.url} context={context}>
             <RoutesObj />
         </StaticRouter>
       </Provider>
@@ -190,6 +194,11 @@ So now, in the `renderView()` function:
 
     ...
 ```
+
+First, we should provite store to the provider in order to share it with the whole app. Then, we provide the current url and the context to the `StaticRouter`, in order to keep track of the current location and also detect any redirects.
+
+In the end, provide any routes that will be part of your app.
+
 
 Everything keeps almost the same:
 
@@ -237,9 +246,12 @@ After creating the HTML, we search for a match with the router configuration and
 }); // Closing `app.use()`
 ```
 
+Keep in mind that the `routesServer` must be a configuration array, just like in [react-router-config](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config){:target="_blank"}{:rel="external"}. 
+
+**The `matchPath`, from `react-router`, will not work directly with Router components.**
 
 ### Why not renderToNodeStream?
-React v16 also supports rendering from a Node stream using [`renderToNodeStream`](https://reactjs.org/docs/react-dom-server.html#rendertonodestream), but in this case, there is a gotcha, at least for some projects that I'm developing.
+React v16 also supports rendering from a Node stream using [renderToNodeStream](https://reactjs.org/docs/react-dom-server.html#rendertonodestream){:target="_blank"}{:rel="external"}, but in this case, there is a gotcha, at least for some projects that I'm developing.
 
 If you are injecting dynamic data in the `HTML` constant, such as meta information, CSS or script files, then this method will not work since there is not possible to embed a Readable stream as an element in a component, just like we are doing in the `HTML` definition with the `${componentHTML}`. This is only possible with strings returned from the `renderToString()`.
 
@@ -319,6 +331,20 @@ app.use(function(req, res){
 
 ## React v16
 ```
+
+// Libs
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import { StaticRouter, matchPath } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+// Components
+import RoutesObj, {routesServer} from '../public/assets/scripts/routes/routes';
+
+// Utils
+import fetchComponentData  from './utils/fetchComponentData';
+
 ...
 
 //

@@ -14,5 +14,8 @@ To setup the development environment, it is necessary to install:
 - jekyll-paginate
 - jekyll-frontmatter-jsonify
 
+## Production ready
+Run `JEKYLL_ENV=production bundle exec jekyll serve` in order to serve as a production environment. This has a major effect in the `site.url`.
+
 ## License
 The project is licensed under **The MIT License (MIT)**, see the LICENSE file for more details.
