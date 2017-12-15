@@ -22,7 +22,7 @@ As a continuity of my last post about [Facebook Comments with AngularJS](http://
 <!--more-->
 ![AngularJS SEO with PHP](/images/blog/2015-12-04-angularjs-seo-with-php/angular-seo.jpg)
 
-#Context
+# Context
 When developing a SPA, the information provided in the HTML has to be requested via AJAX with Javascript. This has great advantages, such as client-side rendering, avoid page refresh, amazing flexibility with DOM manipulation, web components, and so on. But with this paradise comes a curse. At the time of this post, web crawlers are still unable to render Javascript (except Google as far as I know) and as a result, they can not read any content that makes your web app amazing and if this happens, we start facing some major SEO issues.
 
 But why not, you ask? Well, if you have used AngularJS before you noticed the "#" character that shows up in the URL. This symbol is known as "fragment identifier" and the first intend when the internet showed up was to create anchors for links within a webpage, but now is also used to prevent page reload when dealing with AJAX-based webpages. 
@@ -38,7 +38,7 @@ Fear not, there are several solutions that can help you create a SEO Friendly SP
 
 *Note: this article is focused on a **PHP solution** since my projects are stored in **shared hosting** and I'm unable to install NodeJS or other specific technology that is not provided by the host.*
 
-#Solution
+# Solution
 The solution is in providing static "snapshots" of your html with all content ready to be shown. That is why server-side rendered webpages don't have this problem since it is all provided on each page load. In this example I will explain to you how this can be achieved with PHP (take a look also at the [PhantomJS Solution](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html){:target="_blank"}{:rel="external"} for an automated solution, but that can not be applied in this example development environment).
 
 There are several steps needed to solve the problem:
@@ -47,7 +47,7 @@ There are several steps needed to solve the problem:
 * Configure Apache (.htaccess) to redirect all requests that come from crawlers;
 * Request the content from the API and provide the filled HTML.
 
-###Set AngularJS to use crawler friendly URLs
+### Set AngularJS to use crawler friendly URLs
 Right now, AngularJS is using the hash to provide content via Ajax. In order to start making direct *HTTP* requests to the server, we must activate the *HTML5* mode and start using *pushState*.
 
 ~~~~~~~~
@@ -76,7 +76,7 @@ $locationProvider.html5Mode({
 
 So now we must take care of the requests server-side.
 
-###Configure Apache
+### Configure Apache
 Since AngularJS now provides "normal" URLs (without the fragment identifier) and therefore, it is necessary to prepare it to respond.
 
 *Before doing this, have in mind that there is necessary to have **mod_rewrite, mod_proxy and mod_proxy_http** modules installed on your web server.*
@@ -132,7 +132,7 @@ With this set up, we will have this **.htaccess** file:
 
 Now we can prepare our PHP files to retrieve the necessary information.
 
-###Provide the HTML
+### Provide the HTML
 Assuming that you are using an API to get data, we are able to reuse it with the back-end script just like AngularJS does. Let's have an example of a profile page:
 
 ~~~~~~~~
@@ -217,7 +217,7 @@ Now let's fill the HTML:
 
 In this example I provide the most common meta tags for the digital social media crawlers. Since Google crawler also gives a lot of relevance to content, it is equaly essencial to fill the body tag with the right semantic and information, boosting your rating and providing credibility to the crawler.
 
-#Lets test this out
+# Lets test this out
 With everything set up, it is time to see if this solution is really working. There are tools online that provide some kind of validation:
 
 * [Facebook Open Graph Object Debugger](https://developers.facebook.com/tools/debug/){:target="_blank"}{:rel="external"}

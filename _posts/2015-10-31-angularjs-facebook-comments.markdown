@@ -19,19 +19,19 @@ thumbnail:
 <!--more-->
 ![Welcome!](/images/blog/2015-10-31-angularjs-facebook-comments/angular-facebook-comments.jpg)
 
-#Context
+# Context
 Recently I developed an online platform that gathers a list of Portuguese descendent artists from all around the world for [Miraceta Arts](http://mirateca.com/ "Miraceta Arts"). One of the user stories for this project describes the need to provide a comment section for the events that are shown.
 
 The thing is, Facebook loads it's comments asynchronous, and so does AngularJS but they don't work together. The result of this lack of coordination is a blank space in the HTML since Facebook loads everything when the page finishes loading, but not knowing if AngularJS did also. To workaround this issue, it is necessary to combine them.
 
-#Solution
+# Solution
 There are several steps needed to solve the problem:
 
 * [Create a Facebook API Key](https://developers.facebook.com/){:target="_blank"}{:rel="external"} for your application;
 * Place the provided code from Facebook inside the body tag;
 * Make use of AngularJS directives to render the comments section.
 
-###Create a Facebook API Key
+### Create a Facebook API Key
 There is a simple process to create a API Key:
 
 1. Login to Facebook
@@ -39,7 +39,7 @@ There is a simple process to create a API Key:
 3. In the **My Apps** menu, click in **Add a New App**, and choose your app platform
 4. Provide your app name and choose the category.
 
-###Place Facebook code inside the body tag
+### Place Facebook code inside the body tag
 In order to initialize the Facebook Javascript SDK, it is necessary to place a specific code block at the begining of the *\<body\>* tag:
 
 ~~~~~~~~
@@ -66,7 +66,7 @@ In order to initialize the Facebook Javascript SDK, it is necessary to place a s
 
 Have in mind that you must replace *\<YOUR API KEY\>* with the API key provided at the [Facebook developers section](https://developers.facebook.com/ "Facebook developers section"){:target="_blank"}{:rel="external"}, and the *\<lan_LAN\>* with the correct language that will be used for the localization (e.g., "en_EN").
 
-###AngularJS directives to render the comments section
+### AngularJS directives to render the comments section
 Now that we have the required scripts to use the Facebook API, it is time to create our AngularJS directive for the comments section.
 This directive will have other child directive that will be responsible to watch the page status and build the plugin. In order to reuse it, we must define the first directive:
 
