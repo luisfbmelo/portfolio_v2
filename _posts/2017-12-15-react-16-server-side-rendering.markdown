@@ -9,16 +9,16 @@ categories:
 - ssr
 - devlog
 images: 
-- url: /images/blog/2017-12-15-react-16-server-side-rendering/react-16-ssr.jpg
+- url: /images/blog/2017-12-15-react-16-server-side-rendering/react-ssr.jpg
   alt: React v16 - Server Side Rendering (SSR)
 thumbnail:
-- url: /images/blog/2017-12-15-react-16-server-side-rendering/thumb/react-16-ssr.jpg
+- url: /images/blog/2017-12-15-react-16-server-side-rendering/thumb/react-ssr.jpg
   alt: React v16 - Server Side Rendering (SSR)
 ---
 <p class="text-center">This was a year of big changes in the ReactJS world, with the comming of a new version, v16. And one of those affected the Server Side Rendering scripts used in the old version, v15.</p>
 
 <!--more-->
-![Welcome!](/images/blog/2017-12-15-react-16-server-side-rendering/thumb/react-16-ssr.jpg)
+![React v16 SSR!](/images/blog/2017-12-15-react-16-server-side-rendering/thumb/react-ssr.jpg)
 
 # How SSR Works In React 15
 First, let's have a look of how SSR works in React 15. To do so, it is necessary to run a Node server (Express in my case), and run `renderToString` in order to get the rendered elements and include them as HTML when ending the response.
@@ -26,15 +26,13 @@ First, let's have a look of how SSR works in React 15. To do so, it is necessary
 So, it should start with the store construction, in order to create the initial view, and check any routing match:
 
 ```
-/*
- * All code in this section is inside the `app.use()` method
- */
 app.use(function(req, res){
-  // Build store
-  const store    = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
+  // Create store with the middlewares that you need, the `createStore` method from Redux and your reducers
+  const store = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
 
   // Check any match with the given routes and current request location
   match({ routes: appRoutes, location: req.url }, function(err, redirectLocation, renderProps){
+    
     // Handle server error
     if(err) {
       console.error(err);
@@ -51,37 +49,37 @@ app.use(function(req, res){
 Next, it is necessary to start provide the Routing components with the given context in renderProps and return the HTML that will be filled with the initialState and the rendered React Components, from the `ReactDOM.renderToString()` method:
 
 ```
-...
+  ...
 
-function renderView() {
-  // Start initial view with the store data and routing context
-  const InitialView = (
-    <Provider store={store}>
-      <RouterContext {...renderProps} />
-    </Provider>
-  );
+  function renderView() {
+    // Start initial view with the store data and routing context
+    const InitialView = (
+      <Provider store={store}>
+        <RouterContext {...renderProps} />
+      </Provider>
+    );
 
-  // Render ReactJS Components
-  const componentHTML = ReactDOM.renderToString(InitialView);      
+    // Render ReactJS Components
+    const componentHTML = ReactDOM.renderToString(InitialView);      
 
-  // Get initial state from store to append in the DOM
-  const initialState = store.getState();
+    // Get initial state from store to append in the DOM
+    const initialState = store.getState();
 
-  // Set HTML with the initial state and rendered components
-  const HTML = `
-    <!DOCTYPE html>
-      <head>
-        <title>This is a SSR post</title>
-        <script>
-          window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
-        </script>
-      </head>
-      <body>
-        <div id="site-canvas"><div>${componentHTML}</div></div>
-      </body>
-     </html>`;
-  return HTML;
-}
+    // Set HTML with the initial state and rendered components
+    const HTML = `
+      <!DOCTYPE html>
+        <head>
+          <title>This is a SSR post</title>
+          <script>
+            window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
+          </script>
+        </head>
+        <body>
+          <div id="site-canvas"><div>${componentHTML}</div></div>
+        </body>
+       </html>`;
+    return HTML;
+  }
 ```
 
 Have in mind that it is necessary to have the `<Provider />` component as a `<Router />` ancestor in order to work.
@@ -89,12 +87,14 @@ Have in mind that it is necessary to have the `<Provider />` component as a `<Ro
 In the end, the `renderView` function is called after fetching the components data, sending the final HTML to the client:
 
 ```
+  ...
+  
   fetchComponentData(store.dispatch, renderProps.components, renderProps.params)
       .then(renderView)
       .then(html => res.end(html))
       .catch(err => res.json({message:err.message}));
 
-} // Closing `app.use()`
+}); // Closing `app.use()`
 ```
 
 About this last line of code, you should have a `needs` variable inside each parent component. In my way of organizing the components, I create a wrapper component called `<App />` that wraps all components, and after that wrapper, there is a component for each route (e.g. `<AppsPage />`). Inside each page component, there is a `needs` variable with all the actions that should be despatched before sending the final HTML to the client:
@@ -138,13 +138,14 @@ In order to match the routes, create a new function inside the `app.use()` conte
 
 ```
 app.use(function(req, res){
-  const store    = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
+  // Create store with the middlewares that you need, the `createStore` method from Redux and your reducers
+  const store = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
   
   // These variables are going to be used in the end, in order to have enought information to fetch the state from the rendered components
   let params = {},
       components = [];
 
-  //Match
+  // Match routes
   function routerMatch(req, routes = null) {
     // For each route in the provided variable
     routes.map(route => {
@@ -193,26 +194,27 @@ So now, in the `renderView()` function:
 Everything keeps almost the same:
 
 ```
-  ...
+    ...
 
-  const componentHTML = ReactDOMServer.renderToString(InitialView);
+    const componentHTML = ReactDOMServer.renderToString(InitialView);
 
-  const initialState = store.getState();
+    const initialState = store.getState();
 
-  // Set HTML with the initial state and rendered components
-  const HTML = `
-    <!DOCTYPE html>
-      <head>
-        <title>This is a SSR post</title>
-        <script>
-          window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
-        </script>
-      </head>
-      <body>
-        <div id="site-canvas"><div>${componentHTML}</div></div>
-      </body>
-     </html>`;
-  return HTML;
+    // Set HTML with the initial state and rendered components
+    const HTML = `
+      <!DOCTYPE html>
+        <head>
+          <title>This is a SSR post</title>
+          <script>
+            window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
+          </script>
+        </head>
+        <body>
+          <div id="site-canvas"><div>${componentHTML}</div></div>
+        </body>
+       </html>`;
+    return HTML;
+  }
 
   ...
 ```
@@ -225,14 +227,14 @@ After creating the HTML, we search for a match with the router configuration and
   // Get any match from the router configuration (`routesServer`)
   routerMatch(req, routesServer);
 
-  // Fetch any data
+  // Fetch data from `needs` array
   fetchComponentData(store.dispatch, components, params)
       .then(renderView)
       .then(html => res.end(html))
       .catch(err => res.json({message:err.message}));
   }
 
-} // Closing `app.use()`
+}); // Closing `app.use()`
 ```
 
 
@@ -246,25 +248,32 @@ Keep in mind that there are a few changes that must be performed in the client-s
 
 These are major changes in the new version of React that in some cases, require a major refactor of your whole app, but at least SSR has only a few changes, based on the "older ways".
 
-I hope that this article helps you migrating your code to the new React, and be free to comment in the section bellow with sugestions, questions and other solutions that would improve our code base. You can check the full code of each versions bellow, since the repos are private for now.
+I hope that this article helps you migrating your code to the new React, and be free to comment in the section bellow with sugestions, questions and other solutions that would improve our code base. 
 
 # Full code
+Since the project repos are private for now, here I provide you the code for both versions, with comments to help understand each line of code.
 
 ## React v15
 ```
+...
 
 //
 //  React Server Render
 //
 app.use(function(req, res){
+  // Create store with the middlewares that you need, the `createStore` method from Redux and your reducers
   const store = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
 
+  // Check any match with the given routes and current request location
   match({ routes: appRoutes, location: req.url }, function(err, redirectLocation, renderProps){
+    
+    // Handle server error
     if(err) {
       console.error(err);
       return res.status(500).end('Internal server error');
     }
 
+    // If no match based on the props for the routing context, then give 404
     if(!renderProps)
       return res.status(404).end('Not found');
 
@@ -274,11 +283,13 @@ app.use(function(req, res){
           <RouterContext {...renderProps} />
         </Provider>
       );
-
+      // Render ReactJS Components
       const componentHTML = ReactDOM.renderToString(InitialView);      
 
+      // Get initial state from store to append in the DOM
       const initialState = store.getState();
 
+      // Set the JS Template to return
       const HTML = `
       <!DOCTYPE html>
         <head>
@@ -294,32 +305,40 @@ app.use(function(req, res){
 
        return HTML;
     }
-
-
-
+  
+    // Fetch data from `needs` array
     fetchComponentData(store.dispatch, renderProps.components, renderProps.params)
       .then(renderView)
       .then(html => res.end(html))
       .catch(err => res.json({message:err.message}));
   });
 });
+
+...
 ```
 
 ## React v16
 ```
+...
+
 //
 //  React Server Render
 //
 app.use(function(req, res){
   
-
+  // Handle the request for the favicon
+  // Otherwise, the `/*` route for the 404 will match in this case and break the routing
   if (req.url === '/favicon.ico') {
     res.writeHead(200, {'Content-Type': 'image/x-icon'} );
     res.end();
     console.log('favicon requested');
     return;
+
   }else{
+    // Create store with the middlewares that you need, the `createStore` method from Redux and your reducers
     const store = applyMiddleware(multi, thunkMiddleware, apiMiddleware)(createStore)(reducers);
+
+     // These variables are going to be used in the end, in order to have enought information to fetch the state from the rendered components
     let params = {},
       components = [];
 
@@ -367,10 +386,13 @@ app.use(function(req, res){
         return;
       }
 
+      // Render ReactJS Components
       const componentHTML = ReactDOMServer.renderToString(InitialView);      
-
+      
+      // Get initial state from store to append in the DOM
       const initialState = store.getState();
-
+        
+      // Set the JS Template to return
       const HTML = `
       <!DOCTYPE html>
         <head>
@@ -387,17 +409,16 @@ app.use(function(req, res){
        return HTML;
     }
 
-    debug("Routes", routesServer);
-
+    // Get any match from the router configuration (`routesServer`)
     routerMatch(req, routesServer);
-
-    debug("Components", components);
-    debug("Params", params);
-
+  
+    // Fetch data from `needs` array
     fetchComponentData(store.dispatch, components, params)
       .then(renderView)
       .then(html => res.end(html))
       .catch(err => res.json({message:err.message}));
   }
 });
+
+...
 ```
