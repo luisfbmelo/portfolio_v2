@@ -213,16 +213,15 @@ $(window).scroll(function() {
 (function (global){
 global.$ = require('jquery');
 
-$('.filter').on('click', function(e){
+/* $('.filter').on('click', function(e){
     var el = $(e.currentTarget);
-    console.log(el.data('filter'));
 
     if(el.data('filter') && el.data('filter')==='.photo'){
         $('.option.photo').show();
     }else{
         $('.option.photo').hide();
     }
-});
+}); */
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"jquery":14}],9:[function(require,module,exports){
 (function (global){
