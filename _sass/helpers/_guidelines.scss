@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Margins
+   ========================================================================== */
+.padding{
+	&__topbottom{
+		@for $i from 1 through 12{
+			&--#{$i*$padding-custom-step}{
+				padding-top:#{$i*$padding-custom-step}px;
+				padding-bottom:#{$i*$padding-custom-step}px;
+			}
+		}
+
+	}
+
+	&__top{
+		@for $i from 1 through 12{
+			&--#{$i*$padding-custom-step}{
+				padding-top:#{$i*$padding-custom-step}px;
+			}
+		}
+	}
+
+	&__bottom{
+		@for $i from 1 through 12{
+			&--#{$i*$padding-custom-step}{
+				padding-bottom:#{$i*$padding-custom-step}px;
+			}
+		}
+	}
+
+	&__leftright{
+		@for $i from 1 through 12{
+			&--#{$i*$padding-custom-step}{
+				padding-left:#{$i*$padding-custom-step}px;
+				padding-right:#{$i*$padding-custom-step}px;
+			}
+		}
+	}
+
+	&__left{
+		@for $i from 1 through 12{
+			&--#{$i*$padding-custom-step}{
+				padding-left:#{$i*$padding-custom-step}px;
+			}
+		}
+	}
+
+	&__right{
+		@for $i from 1 through 12{
+			&--#{$i*$padding-custom-step}{
+				padding-right:#{$i*$padding-custom-step}px;
+			}
+		}
+	}
+}
+
+.margin{
+	&__topbottom{
+		@for $i from 1 through 12{
+			&--#{$i*$margin-custom-step}{
+				margin-top:#{$i*$margin-custom-step}px;
+				margin-bottom:#{$i*$margin-custom-step}px;
+			}
+		}
+
+	}
+
+	&__top{
+		@for $i from 1 through 12{
+			&--#{$i*$margin-custom-step}{
+				margin-top:#{$i*$margin-custom-step}px;
+			}
+		}
+	}
+
+	&__bottom{
+		@for $i from 1 through 12{
+			&--#{$i*$margin-custom-step}{
+				margin-bottom:#{$i*$margin-custom-step}px;
+			}
+		}
+	}
+
+	&__leftright{
+		@for $i from 1 through 12{
+			&--#{$i*$margin-custom-step}{
+				margin-left:#{$i*$margin-custom-step}px;
+				margin-right:#{$i*$margin-custom-step}px;
+			}
+		}
+	}
+
+	&__left{
+		@for $i from 1 through 12{
+			&--#{$i*$margin-custom-step}{
+				margin-left:#{$i*$margin-custom-step}px;
+			}
+		}
+	}
+
+	&__right{
+		@for $i from 1 through 12{
+			&--#{$i*$margin-custom-step}{
+				margin-right:#{$i*$margin-custom-step}px;
+			}
+		}
+	}
+}

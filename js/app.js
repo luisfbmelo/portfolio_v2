@@ -5,6 +5,7 @@ require("./custom_modules/external.js");
 require("./custom_modules/bootstrap-fc.js");
 require("./custom_modules/carousel.js");
 require("./custom_modules/loadmore.js");
+require("./custom_modules/mix.js");
 
 // Animate menu background
 require("./custom_modules/menu.js");
