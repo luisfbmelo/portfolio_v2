@@ -28,28 +28,75 @@ Thank you Carolina & Tiago for trusting me to document this stage of your life!
 </p>
 
 <!--more-->
-
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/2.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/3.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/3_1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/4.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/5.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/6.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/6_1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/7.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/8.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/8_1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/9.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/10.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/10_1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/11.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/12.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/13.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/14.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/14_1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/14_2.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/15.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/15_1.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/16.jpg)
-![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/17.jpg)
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/2.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/2.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/3.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/3.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/3_1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/3_1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/4.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/4.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/5.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/5.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/6.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/6.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/6_1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/6_1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/7.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/7.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/8.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/8.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/8_1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/8_1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/9.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/9.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/10.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/10.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/10_1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/10_1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/11.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/11.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/12.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/12.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/13.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/13.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/14.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/14.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/14_1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/14_1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/14_2.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/14_2.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/15.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/15.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/15_1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/15_1.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/16.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/16.jpg)
+</a>
+<a href="/images/blog/2018-08-10-carolina-tiago-engagement-photography/17.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![C&T](/images/blog/2018-08-10-carolina-tiago-engagement-photography/17.jpg)
+</a>

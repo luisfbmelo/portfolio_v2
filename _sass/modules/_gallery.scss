@@ -1,0 +1,26 @@
+//
+// Gallery
+// 
+.ekko-lightbox{
+    .modal-dialog{
+        width:auto!important;
+    }
+
+    &-nav-overlay{
+        a:hover{
+            color:white!important;
+        }
+    }
+}
+
+.post-content{
+    a[data-toggle="lightbox"]{
+        display: block;
+        text-align:center;
+        @include transition(all 0.3s ease);
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}

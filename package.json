@@ -61,6 +61,12 @@
         "jquery:jQuery"
       ]
     },
+    "ekko-lightbox": {
+      "exports": "ekko-lightbox",
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
     "ejs": {
       "exports": "ejs"
     },

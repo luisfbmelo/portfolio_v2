@@ -22,13 +22,33 @@ Last Sunday was an amazing day, I had the oportunity to photograph one of the mo
 <p class="text-center">
   Here I will show you some photographs of this shoot.
 </p>
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/1.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/2.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/3.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/4.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/5.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/6.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/7.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/8.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/9.jpg)
-![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/10.jpg)
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/1.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/1.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/2.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/2.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/3.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/3.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/4.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/4.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/5.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/5.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/6.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/6.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/7.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/7.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/8.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/8.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/9.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/9.jpg)
+</a>
+<a href="/images/blog/2016-07-06-matilde-pregnancy-photography/10.jpg" data-toggle="lightbox" data-gallery="gallery">
+  ![Matilde](/images/blog/2016-07-06-matilde-pregnancy-photography/10.jpg)
+</a>
