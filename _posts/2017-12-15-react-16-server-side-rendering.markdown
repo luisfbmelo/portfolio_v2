@@ -15,7 +15,7 @@ thumbnail:
 - url: /images/blog/2017-12-15-react-16-server-side-rendering/thumb/react-ssr.jpg
   alt: React v16 - Server Side Rendering (SSR)
 ---
-<p class="text-center">This was a year of big changes in the ReactJS world, with the comming of a new version, v16. And one of those affected the Server Side Rendering scripts used in the old version, v15.</p>
+<p class="text-center">This was a year of big changes in the ReactJS world, with the coming of a new version, v16. And one of those affected the Server Side Rendering scripts used in the old version, v15.</p>
 
 <!--more-->
 ![React v16 SSR!](/images/blog/2017-12-15-react-16-server-side-rendering/thumb/react-ssr.jpg)
